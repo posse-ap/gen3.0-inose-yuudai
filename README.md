@@ -1,3 +1,2 @@
 # inose-yuudai
-クァwせdrftgyふじこクァwせdrftgyふじこ
-クァw背drftgyふじこlくぁwせdrftgyふじこ
+
