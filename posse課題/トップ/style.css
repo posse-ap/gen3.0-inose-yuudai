@@ -1,12 +1,11 @@
 .header{
-  position: relative;
-  
+  display: flex;
 
 }
 
 .logo{
-  display: flex;
-  margin-left: auto;
+  
+  margin-right: auto;
   
 }
 
@@ -17,9 +16,9 @@
 }
 
 .menu{
-  margin-left: 85%;
+  padding: auto;
   display: flex;
-  position: relative;
+  
 }
 
 .sns{
