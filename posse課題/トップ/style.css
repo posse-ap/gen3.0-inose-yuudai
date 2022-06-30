@@ -26,10 +26,10 @@
   display: flex;
 }
 
-.footer{
-  margin-top: 80px;
-text-align: center;
-margin-bottom: 0%;
-position: relative;
-display: flex;
+.top{
+  margin-top: auto;
+  margin-left: 50%;
+  margin-right: 50;
+bottom: 0;
+position: absolute;
 }
