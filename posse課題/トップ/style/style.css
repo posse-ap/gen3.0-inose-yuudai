@@ -149,12 +149,12 @@
         .posse-intro {
             display: flex;
             justify-content: space-between;
+            padding-right: 228px;
         }
         
         .posse-intro-text {
             width: 472px;
             height: 175px;
-            padding-right: 228px;
             line-height: 25.2px;
             font-size: 14px;
             align-items: center;
