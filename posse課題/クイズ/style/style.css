@@ -1,180 +1,244 @@
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .frame5 {
-            /*  ok */
-            display: flex;
-            margin-top: 15px;
-            margin-right: 24px;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .sns {
-            display: flex;
-            list-style: none;
-            gap: 16px;
-        }
-        
-        .logo {
-            margin-left: 24px;
-            margin-top: 26.23px;
-        }
-        
-        .menu {
-            gap: 32px;
-            display: flex;
-            align-items: center;
-            padding-right: 32px;
-        }
-        
-        main {
-            width: 100%;
-        }
-        
-        .q-number {
-            padding-top: 128px;
-            padding-left: 188px;
-        }
-        
-        .a-mark {
-            padding-top: 78px;
-            padding-left: 188px;
-            padding-bottom: 16px;
-        }
-        
-        .q-text {
-            padding-right: 228px;
-            padding-left: 228px;
-            font-size: 36px;
-            font-family: 'Noto Sans JP'
-        }
-        
-        .question-image {
-            text-align: center;
-        }
-        
-        .choices {
-            display: flex;
-            gap: 24px;
-            margin: 0 auto;
-            width: 1054px;
-        }
-        
-        .choice {
-            display: flex;
-            justify-content: space-between;
-            padding: 24px;
-            height: 33px;
-            width: 310px;
-            align-items: center;
-            font-size: 18px;
-            border-radius: 8px;
-            border: 5px solid #EEEEEE;
-            font-family: 'Noto Sans JP';
-            font-style: normal;
-            font-weight: 700;
-            line-height: 180%;
-        }
-        
-        .black-check {
-            padding-right: 2px;
-        }
-        
-        .href {
-            display: flex;
-            background: #F6F6F6;
-            border-radius: 8px;
-            width: 1054px;
-            height: 80px;
-            margin: 0 auto;
-            z-index: -3;
-            margin-top: 16px;
-        }
-        
-        .href-text,
-        .mark {
-            padding-top: 32px;
-            padding-left: 24px;
-            font-weight: 700;
-        }
-        /*下のライン以降のところ*/
-        
-        footer {
-            position: relative;
-            bottom: 0;
-            text-align: center;
-            padding-top: 56.05px;
-            align-items: center;
-            border-top: 1px solid #EEEEEE;
-            padding-top: 5px;
-        }
-        
-        .sns-under {
-            display: flex;
-            list-style: none;
-            gap: 19px;
-            display: inline-flex;
-            margin-bottom: 56px;
-            margin: 0 auto;
-            text-align: center;
-            align-items: center;
-        }
-        
-        h2 {
-            padding-top: 68px;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .detail-posse {
-            position: relative;
-            z-index: 2;
-            background-image: url("../imgs/background.png");
-            background-repeat: no-repeat;
-        }
-        
-        .line {
-            width: 984px;
-            height: 358px;
-            margin: 0 auto;
-            padding-bottom: 56px;
-        }
-        
-        .detail-posse-text {
-            text-align: center;
-            color: #ffffff;
-        }
-        
-        .line-icon {
-            padding-right: 10px;
-            align-items: center;
-            text-align: center;
-            z-index: 2;
-        }
-        
-        .detail-posse-line-add {
-            padding-bottom: 68px;
-            padding-top: 239px;
-        }
-        
-        .detail-posse-line-add-text {
-            background-repeat: no-repeat;
-            background-image: url(../imgs/Rectangle\ 7.png);
-            padding: 17px;
-            background-position-x: center;
-            color: black;
-        }
-        
-        .copy {
-            padding-top: 36px;
-            border-top: 1px solid #EEEEEE;
-            padding-bottom: 31.78px;
-        }
-        
-        .logo-under {
-            padding-top: 56px;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frame5 {
+    /*  ok */
+    display: flex;
+    margin-top: 15px;
+    margin-right: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sns {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+.logo {
+    margin-left: 24px;
+    margin-top: 26.23px;
+}
+
+.menu {
+    gap: 32px;
+    display: flex;
+    align-items: center;
+    padding-right: 32px;
+}
+
+main {
+    width: 100%;
+}
+
+.q-number {
+    padding-top: 128px;
+    padding-left: 188px;
+}
+
+.a-mark {
+    padding-top: 78px;
+    padding-left: 188px;
+    padding-bottom: 16px;
+}
+
+.q-text {
+    padding-right: 228px;
+    padding-left: 228px;
+    font-size: 36px;
+    font-family: 'Noto Sans JP'
+}
+
+.question-image {
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    gap: 24px;
+    margin: 0 auto;
+    width: 1054px;
+}
+
+.choice {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    height: 33px;
+    width: 310px;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 5px solid #EEEEEE;
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+}
+
+.choice-true,
+.choice-false {
+    border: 5px solid blue;
+    color: blue;
+    background-color: rgba(0, 69, 204, 0.2);
+}
+
+.black-check {
+    padding-right: 2px;
+}
+
+.cc {
+    display: none;
+}
+
+.commentary-correct {
+    display: block;
+    padding: 20px 0px 20px 0px;
+    border-radius: 8px;
+    width: 1054px;
+    height: 70px;
+    margin: 0 auto;
+    background-color: rgba(255, 192, 203, 0.3);
+    margin-top: 16px;
+}
+
+.ci {
+    display: none;
+}
+
+.commentary-incorrect {
+    display: block;
+    padding: 20px 0px 20px 0px;
+    border-radius: 8px;
+    width: 1054px;
+    height: 70px;
+    margin: 0 auto;
+    background-color: rgba(0, 69, 204, 0.2);
+    margin-top: 16px;
+    border: 4px solid #0000ff;
+}
+
+.commentary-text {
+    padding-left: 30px;
+}
+
+.choice-stop {
+    pointer-events: none;
+}
+
+.true-or-false {
+    font-size: 130%;
+    color: #ff0000;
+}
+
+.seikai-naiyou::first-letter {
+    font-size: 130%;
+}
+
+.href {
+    display: flex;
+    background: #F6F6F6;
+    border-radius: 8px;
+    width: 1054px;
+    height: 80px;
+    margin: 0 auto;
+    z-index: -3;
+    margin-top: 16px;
+}
+
+.href-text,
+.mark {
+    padding-top: 32px;
+    padding-left: 24px;
+    font-weight: 700;
+}
+
+
+/*下のライン以降のところ*/
+
+footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    padding-top: 56.05px;
+    align-items: center;
+    border-top: 1px solid #EEEEEE;
+    padding-top: 5px;
+}
+
+.sns-under {
+    display: flex;
+    list-style: none;
+    gap: 19px;
+    display: inline-flex;
+    margin-bottom: 56px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+h2 {
+    padding-top: 68px;
+    align-items: center;
+    text-align: center;
+}
+
+.detail-posse {
+    position: relative;
+    z-index: 2;
+    background-image: url("../imgs/background.png");
+    background-repeat: no-repeat;
+}
+
+.line {
+    width: 984px;
+    height: 358px;
+    margin: 0 auto;
+    padding-bottom: 56px;
+}
+
+.detail-posse-text {
+    text-align: center;
+    color: #ffffff;
+}
+
+.line-icon {
+    padding-right: 10px;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.detail-posse-line-add {
+    padding-bottom: 68px;
+    padding-top: 239px;
+}
+
+.detail-posse-line-add-text {
+    background-repeat: no-repeat;
+    background-image: url(../imgs/Rectangle\ 7.png);
+    padding: 17px;
+    background-position-x: center;
+    color: black;
+}
+
+.copy {
+    padding-top: 36px;
+    border-top: 1px solid #EEEEEE;
+    padding-bottom: 31.78px;
+}
+
+.logo-under {
+    padding-top: 56px;
+}
+
+.line-fixed {
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+    z-index: 377;
+}

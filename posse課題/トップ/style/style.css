@@ -164,7 +164,8 @@ h1 {
 .posse-intro {
     display: flex;
     justify-content: space-between;
-    padding-right: 228px;
+    margin: 5px;
+    gap: 20px;
 }
 
 .posse-intro-text {
@@ -173,12 +174,12 @@ h1 {
     line-height: 25.2px;
     font-size: 14px;
     align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    padding-top: 40px;
+    padding-right: 20%;
 }
 
 .posse-intro-photo {
-    padding-left: 228px;
+    padding-left: 20%;
 }
 
 .line-fixed {
