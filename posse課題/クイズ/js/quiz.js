@@ -317,7 +317,7 @@ button631.onclick = buttonClick63;
 let button632 = document.getElementById("target-false6")
 
 
-//↑押した時に不正解が出る5問目 選択肢1,3
+//↑押した時に不正解が出る6問目 選択肢1,3
 
 function buttonClick60() {
     button60.classList.add("choice-stop")

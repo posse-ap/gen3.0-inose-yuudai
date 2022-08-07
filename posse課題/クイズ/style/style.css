@@ -2,12 +2,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #FFFFFF;
+    z-index: 9999;
 }
 
 .frame5 {
-    /*  ok */
     display: flex;
-    margin-top: 15px;
     margin-right: 24px;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +24,6 @@ header {
 
 .logo {
     margin-left: 24px;
-    margin-top: 26.23px;
 }
 
 .menu {
@@ -31,37 +33,80 @@ header {
     padding-right: 32px;
 }
 
+a {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu-link {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
 main {
     width: 100%;
 }
 
+.header-image {
+    padding-top: 80px;
+}
+
+ul {
+    list-style-type: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding-inline-start: 0px;
+}
+
+
+/*メイン*/
+
+.quiz-list {
+    margin: 0 auto;
+}
+
+.quiz {
+    max-width: 1032px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.q-and-a {
+    list-style: none;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    padding: 0 24px;
+    max-width: 100%;
+}
+
 .q-number {
-    padding-top: 128px;
-    padding-left: 188px;
+    margin-top: 128px;
 }
 
 .a-mark {
     padding-top: 78px;
-    padding-left: 188px;
     padding-bottom: 16px;
 }
 
 .q-text {
-    padding-right: 228px;
-    padding-left: 228px;
     font-size: 36px;
-    font-family: 'Noto Sans JP'
+    font-family: 'Noto Sans JP';
+    font-weight: bold;
 }
 
 .question-image {
     text-align: center;
+    margin: 0 auto;
 }
 
 .choices {
     display: flex;
     gap: 24px;
     margin: 0 auto;
-    width: 1054px;
 }
 
 .choice {
@@ -78,13 +123,13 @@ main {
     font-style: normal;
     font-weight: 700;
     line-height: 180%;
+    cursor: pointer;
 }
 
 .choice-true,
 .choice-false {
-    border: 5px solid blue;
-    color: blue;
-    background-color: rgba(0, 69, 204, 0.2);
+    border: 5px solid #0071bc;
+    background-color: rgba(0, 69, 204, 0.1);
 }
 
 .black-check {
@@ -99,11 +144,11 @@ main {
     display: block;
     padding: 20px 0px 20px 0px;
     border-radius: 8px;
-    width: 1054px;
     height: 70px;
     margin: 0 auto;
-    background-color: rgba(255, 192, 203, 0.3);
+    background-color: #fff2f5;
     margin-top: 16px;
+    font-weight: bold;
 }
 
 .ci {
@@ -114,16 +159,16 @@ main {
     display: block;
     padding: 20px 0px 20px 0px;
     border-radius: 8px;
-    width: 1054px;
     height: 70px;
     margin: 0 auto;
-    background-color: rgba(0, 69, 204, 0.2);
+    background-color: rgba(0, 69, 204, 0.1);
     margin-top: 16px;
-    border: 4px solid #0000ff;
+    font-weight: bold;
 }
 
 .commentary-text {
     padding-left: 30px;
+    font-weight: bold;
 }
 
 .choice-stop {
@@ -135,7 +180,7 @@ main {
     color: #ff0000;
 }
 
-.seikai-naiyou::first-letter {
+.answer_detail::first-letter {
     font-size: 130%;
 }
 
@@ -143,7 +188,6 @@ main {
     display: flex;
     background: #F6F6F6;
     border-radius: 8px;
-    width: 1054px;
     height: 80px;
     margin: 0 auto;
     z-index: -3;
@@ -160,50 +204,37 @@ main {
 
 /*下のライン以降のところ*/
 
-footer {
-    position: relative;
-    bottom: 0;
-    text-align: center;
-    padding-top: 56.05px;
-    align-items: center;
-    border-top: 1px solid #EEEEEE;
-    padding-top: 5px;
-}
-
-.sns-under {
-    display: flex;
-    list-style: none;
-    gap: 19px;
-    display: inline-flex;
-    margin-bottom: 56px;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
-}
-
 h2 {
     padding-top: 68px;
-    align-items: center;
-    text-align: center;
+    font-size: 40px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
 }
 
 .detail-posse {
-    position: relative;
     z-index: 2;
-    background-image: url("../imgs/background.png");
     background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 984px;
+    position: relative;
+    padding: 0 24px;
 }
 
 .line {
-    width: 984px;
-    height: 358px;
     margin: 0 auto;
     padding-bottom: 56px;
+    width: 100%;
+    max-width: 1032px;
 }
 
 .detail-posse-text {
     text-align: center;
     color: #ffffff;
+    margin: 0 auto;
+    background-image: url("../imgs/background.png");
+    height: 358px;
 }
 
 .line-icon {
@@ -215,30 +246,90 @@ h2 {
 
 .detail-posse-line-add {
     padding-bottom: 68px;
-    padding-top: 239px;
+}
+
+.line-button {
+    max-width: 320px;
+}
+
+p {
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 .detail-posse-line-add-text {
-    background-repeat: no-repeat;
-    background-image: url(../imgs/Rectangle\ 7.png);
     padding: 17px;
-    background-position-x: center;
-    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    max-width: 320px;
+    background-color: #fff;
+    border-radius: 50px;
+    color: #333;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.line-add-and-icon-link {
+    gap: 30px;
+}
+
+.icon-link {
+    padding-left: 110px;
+    position: absolute;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    align-items: center;
+    border-top: 1px solid #EEEEEE;
+    padding-top: 5px;
+}
+
+.logo-under {
+    margin: 0 auto;
+    padding-top: 56px;
+}
+
+.official-site {
+    color: #666;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 24px;
+}
+
+.sns-under {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 32px;
+    list-style: none;
+    margin-bottom: 48px;
+    padding: 0;
+}
+
+.posse-sns {
+    display: list-item;
 }
 
 .copy {
-    padding-top: 36px;
+    padding-top: 38px;
     border-top: 1px solid #EEEEEE;
     padding-bottom: 31.78px;
 }
 
-.logo-under {
-    padding-top: 56px;
+.line-fixed {
+    bottom: 16px;
+    right: 16px;
+    position: fixed;
+    z-index: 377;
 }
 
-.line-fixed {
-    position: fixed;
-    right: 0;
-    bottom: 10px;
-    z-index: 377;
+.other-than-question-number {
+    color: #0071bc;
 }

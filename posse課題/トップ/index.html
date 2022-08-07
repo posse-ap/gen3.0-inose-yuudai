@@ -17,18 +17,18 @@
         <div class="logo">
             <img src="imgs/logo.png" alt="logo">
         </div>
-        <ul>
+        <ul class="quiz-list">
             <div class="frame5">
                 <li class="menu">
-                    <a href="index.html">POSSEとは</a>
-                    <a href="../クイズ/index.html">クイズ</a>
+                    <a href="index.html" class="menu-link">トップページ</a>
+                    <a href="../クイズ/index.html" class="menu-link">クイズ</a>
                 </li>
                 <div class="sns">
                     <li class="Twitter">
-                        <img src="imgs/twitter.png" alt="Twitter">
+                        <a href="https://twitter.com/posse_program"><img src="imgs/twitter.png " alt=" "></a>
                     </li>
                     <li class="instagram">
-                        <img src="imgs/insta.png" alt="instagram">
+                        <a href="https://www.instagram.com/posse_programming/"><img src="imgs/insta.png "></a>
                     </li>
                 </div>
             </div>
@@ -36,8 +36,9 @@
     </header>
     <main>
 
-        <div class="mainvisual-img">
-            <img src="imgs/mainvisual.png" alt="" width="976px" height="680px">
+        <div class="main-visual">
+            <div class="main-visual-img">
+                <img src="imgs/mainvisual.png" alt="" width="976px" height="680px"></div>
             <div class="intro">
                 <div class="intro-text">
                     学生プログラミングコミュニティ　POSSE(ポッセ)
@@ -49,10 +50,11 @@
                     ScrollDown
                 </div>
                 <div class="line-fixed">
-                    <a href="# "><img src="imgs/右下固定バナー.png" alt=""></a>
+                    <a href="https://line.me/R/ti/p/@651htnqp?from=page"><img src="imgs/fixed-banner.png" alt=""></a>
                 </div>
             </div>
         </div>
+
 
         <section class="posse">
 
@@ -71,38 +73,51 @@
             <article class="detail-posse ">
                 <div class="detail-posse-text ">
                     <h2>
-                        <img src="imgs/icon-line.png " alt="ライン " class="line-icon ">POSSE　公式LINE
+                        <div class="line-icon "><img src="imgs/icon-line.png " alt="ライン height=" 40px length="40px "></div>
+                        POSSE 公式LINE
                     </h2>
                     <p>
                         公式LINEにてご質問を随時受け付けております。
                         <br>詳細やPOSSE最新情報につきましては、公式LINEにてお知らせ致しますので
                         <br>下記ボタンより友達追加をお願いします!
-                        <div class="detail-posse-line-add-text ">
-                            LINE追加
-                        </div>
                     </p>
-                    <div class="detail-posse-line-add "></div>
+                    <div class="line-add-and-icon-link">
+                        <a href="https://line.me/R/ti/p/@651htnqp?from=page" class="detail-posse-line-add-text">LINE追加<img src="imgs/icon-link.png" alt="" class="icon-link"></a>
+
+
+
+
+                    </div>
+
                 </div>
             </article>
         </section>
     </main>
+
+
+
     <footer>
         <div class="logo-under ">
             <img src="imgs/logo.png " alt="logo ">
         </div>
-        <p class="link ">POSSE公式サイト</p>
+        <div class="official-site ">
+            <a href="https://posse-ap.com/ ">POSSE公式サイト</a>
+        </div>
+
+        <br>
         <ul class="sns-under ">
-            <li class="Twitter ">
-                <a href="# "><img src="imgs/twitter.png " alt=" "></a>
+            <li class="posse-sns ">
+                <a href="https://twitter.com/posse_program "><img src="imgs/twitter.png " alt=" "></a>
             </li>
-            <li class="instagram ">
-                <a href="# "><img src="imgs/insta.png "></a>
+            <li class="posse-sns ">
+                <a href="https://www.instagram.com/posse_programming/ "><img src="imgs/insta.png "></a>
             </li>
         </ul>
         <div class="copy ">
             <small>&copy; 2022 POSSE</small>
         </div>
     </footer>
+    <script src="js/quiz.js "></script>
 </body>
 
 </html>
