@@ -1,3 +1,3 @@
 # inose-yuudai
 
-test
+test. 
