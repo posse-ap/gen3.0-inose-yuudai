@@ -54,6 +54,9 @@ a {
     letter-spacing: 0.1em;
 }
 
+
+/* ↓メインビジュアル */
+
 .main-visual {
     padding-left: 464px;
     position: relative;
@@ -64,7 +67,6 @@ a {
 
 .main-visual-img {
     height: 100%;
-    object-fit: cover;
     width: 100%;
     border-radius: 80px 0 0 80px;
     display: block;
@@ -88,7 +90,10 @@ a {
 
 .intro-text {
     color: #0071bc;
-    padding: 50px 62px 23px
+    padding: 50px 62px 23px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.8;
 }
 
 .intro-text-main {
@@ -98,13 +103,17 @@ a {
     height: 170px;
     line-height: 80px;
     font-family: 'Noto Sans JP';
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.3333;
+    margin-top: 10px;
 }
 
 .ScrollDown {
     width: 88px;
     height: 21px;
     margin-left: 76px;
-    margin-top: 156px;
+    margin-top: 126px;
 }
 
 .posse {
@@ -153,16 +162,6 @@ footer {
     font-size: 14px;
     line-height: 1.8;
     margin-top: 24px;
-}
-
-.sns-under {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-top: 32px;
-    list-style: none;
-    margin-bottom: 48px;
-    padding: 0;
 }
 
 .posse-sns {
@@ -224,7 +223,6 @@ h2 {
     color: #333;
     display: inline-block;
     width: 100%;
-    position: relative;
 }
 
 .copy {
@@ -238,13 +236,19 @@ h2 {
     margin: 0 auto;
 }
 
-.line-add-and-icon-link {
-    gap: 30px;
-}
-
 .icon-link {
     padding-left: 110px;
     position: absolute;
+}
+
+.sns-under {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 32px;
+    list-style: none;
+    margin-bottom: 48px;
+    padding: 0;
 }
 
 h1 {
