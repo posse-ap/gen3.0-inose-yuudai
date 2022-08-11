@@ -208,9 +208,6 @@ const setDisabled = answers => {
     })
 }
 
-
-
-
 /**
  * @description trueかfalseで出力する文字列を出し分ける
  * @param target {Element}
@@ -219,13 +216,6 @@ const setDisabled = answers => {
 const setTitle = (target, isCorrect) => {
     target.innerText = isCorrect ? '正解！' : '不正解...';
 }
-
-
-
-
-// ↑とりま保留
-
-
 
 /**
  * @description trueかfalseでクラス名を付け分ける
@@ -236,19 +226,12 @@ const setClassName = (target, isCorrect) => {
     target.classList.add(isCorrect ? 'is-correct' : 'is-incorrect');
 }
 
-
-// isーcorrectを一回書いて消すやつをもう一回かな？
-
-
-
-
 /**
  * 各問題の中での処理
  */
 allQuiz.forEach(quiz => {
     const answers = quiz.querySelectorAll('.js-answer');
     const selectedQuiz = Number(quiz.getAttribute('data-quiz'));
-    // ↑data-quizって何
     const answerBox = quiz.querySelector('.js-answerBox');
     const answerTitle = quiz.querySelector('.js-answerTitle');
     const answerText = quiz.querySelector('.js-answerText');
@@ -262,10 +245,12 @@ allQuiz.forEach(quiz => {
             setDisabled(answers);
 
             // 正解ならtrue, 不正解ならfalseをcheckCorrectに格納
+            // ↓これちょっと違うかも
             const correctNumber = quizArray[selectedQuiz].correctNumber
             const isCorrect = correctNumber === selectedAnswerNumber;
 
             // 回答欄にテキストやclass名を付与
+            // ↓これちょっと違うかも
             answerText.innerText = quizArray[selectedQuiz].answers[correctNumber];
             setTitle(answerTitle, isCorrect);
             setClassName(answerBox, isCorrect);
