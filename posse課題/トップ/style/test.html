@@ -1,15 +1,64 @@
-<!DOCTYPE html>
-<html lang="ja">
+"Plus Jakarta Sans", "Noto Sans JP", sans-serif;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 
-<body>
 
-</body>
+<div class="header-image">
+    <img src="imgs/Main visual.png" width="100%" height="auto">
+</div>
+<section class="quiz">
+    <ul>
+        <li class="q-and-a js-quiz" data-quiz="0">
+            <div class="question_construct_all">
+                <h3 class="q_image_quiz_text">
+                    <span class="q-a-label">
+                        Q1
+                    </span>
+                    <span class="q-text">
+                        日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？
+                    </span>
+                </h3>
+                <figure class="question-image">
+                    <img src="imgs/img-quiz01.png">
+                </figure>
+            </div>
+            <div class="answer">
+                <span class="q-a-label q-a-label-accent">
+                    A
+                </span>
 
-</html>
+                <ul class="choices " id="full-target">
+                    <li class="choice">
+                        <button class="choice-button  js-answer is-selected" data-answer="0" disabled>
+                            <!-- ↑is selected disabled入るかも -->
+                        約28万人 
+                        <i class="black-check"><img src="imgs/Polygon 1.svg" alt=""></i>
+
+                        <!-- ↑押したらdisplay none -->
+                        </button>
+                    </li>
+                    <li class="choice">
+                        <button class="choice-button  js-answer is-selected" data-answer="1" disabled>
+
+                            <!--↓サンプルでは謎に"がついている -->
+                        約79万人 
+                        <i class="black-check">
+                        <img src="imgs/Polygon 1.svg" alt=""></i>
+                    </button>
+                    </li>
+                    <li class="choice">
+                        <button class="choice-button  js-answer is-selected" data-answer="2" disabled>
+                        約183万人 
+                        <i class="black-check"><img src="imgs/Polygon 1.svg" alt=""></i>
+                        </button>
+                    </li>
+                </ul>
+
+                <div class=" p-quiz-box-answer-correct js-answerBox  is-correct is-incorrect ">
+                    <!-- 一個をアレンジしているのか複数個あるのかどうかわからない-->
+                    <p class="commentary js-answerTitle ">
+
+                    </p>
+                    <p class="answer-contents ">
+                        <span class="answer-contents-label">A</span>
+                        <span class="js-answer-text "></span>
+                    </p>

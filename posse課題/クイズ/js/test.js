@@ -16,7 +16,7 @@
             question: '日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？',
             answers: ['約28万人', '約79万人', '約183万人'],
             correctNumber: 1,
-            note: '経済産業省 2019年3月 － IT 人材需給に関する調査'
+            href: '経済産業省 2019年3月 － IT 人材需給に関する調査'
         },
         {
             id: 2,
@@ -35,7 +35,7 @@
             question: 'イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？',
             answers: ['Society 5.0', 'CyPhy', 'SDGs'],
             correctNumber: 0,
-            note: 'Society5.0 - 科学技術政策 - 内閣府'
+            href: 'Society5.0 - 科学技術政策 - 内閣府'
         },
         {
             id: 5,
@@ -48,7 +48,7 @@
             question: '先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？',
             answers: ['約2倍', '約5倍', '約11倍'],
             correctNumber: 1,
-            note: 'Accenture Technology Vision 2021'
+            href: 'Accenture Technology Vision 2021'
         }
     ];
 
@@ -92,17 +92,7 @@
         <i class="mark"><img src="imgs/icon-note.png" alt=""></i>${quizItem.note}
     </cite>` : '';
 
-
-
-
-
-
-
-
-
-
-
-        //↓大丈夫かな
+        //↓サンプルではsection
 
 
         return `< li class="q-and-a js-quiz" data-quiz="${questionNumber}">
@@ -110,59 +100,45 @@
 
 
 
-      <div class="question_construct_all">
+    <div class="question_construct_all">
         <h3 class="q_image_quiz_text">
-          <span class="q-label">Q${questionNumber + 1}</span>
-          <span
+        <span class="q-label">Q${questionNumber + 1}</span>
+        <span
             class="q-text">${quizItem.question}</span>
         </h3>
         <figure class="question-image">
         <img src="../assets/img/quiz/img-quiz0${quizItem.id}.png" alt="">
         </figure>
-      </div>
-      <div class="answer">
+    </div>
+    <div class="answer">
         <span class="q-a-label q-a-label-accent">A</span>
         <ul class="choices">
-          ${answersHtml}
+        ${answersHtml}
         </ul>
 
-
-
-
-
-
-
-
-        <!-- "p-quiz-box__answer__correct  js-answerBox"サンプルのクラス名はこれ とりあえずcommentaryで進めるけど、サンプルと挙動が違うところ選んでるから気をつけて -->
-      
-        "commentary"
-
-         <div class=>
-          <p class="commentary js-answerTitle"></p>
-          
-          
-          
-
-
-
-
-
-
-
-
-
-        
-
-
-          <p class="p-quiz-box__answer__correct__content">
-            <span class="p-quiz-box__answer__correct__content__label">A</span>
-            <span class="js-answerText"></span>
-          </p>
-        </div>
+        <div class="p-quiz-box__answer__correct js-answerBox">
+        <p class="commentary js-answerTitle"></p>
+      <p class="answer-contents">
+      <span class="answer-contents-label">A</span>
+      <span class="js-answer-text"></span>
+        </p>
       </div>
-      ${noteHtml}
-    </>`
+    </div>
+    ${noteHtml}
+  </>`
     }
+
+
+
+
+
+
+
+
+
+    // <!-- "p-quiz-box__answer__correct  js-answerBox"サンプルのクラス名はこれ とりあえずcommentaryで進めるけど、サンプルと挙動が違うところ選んでるから気をつけて -->
+
+    // "commentary"
 
     /**
      * @description 配列の並び替え
@@ -209,6 +185,16 @@
         })
     }
 
+
+
+
+
+
+
+
+
+
+
     /**
      * @description trueかfalseで出力する文字列を出し分ける
      * @param target {Element}
@@ -218,6 +204,13 @@
         target.innerText = isCorrect ? '正解！' : '不正解...';
     }
 
+
+
+
+    // ↑とりま保留
+
+
+
     /**
      * @description trueかfalseでクラス名を付け分ける
      * @param target {Element}
@@ -226,6 +219,12 @@
     const setClassName = (target, isCorrect) => {
         target.classList.add(isCorrect ? 'is-correct' : 'is-incorrect');
     }
+
+
+    // isーcorrectを一回書いて消すやつをもう一回かな？
+
+
+
 
     /**
      * 各問題の中での処理
