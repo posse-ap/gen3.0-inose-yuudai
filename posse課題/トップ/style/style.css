@@ -1,9 +1,18 @@
+/*  レスポンシブ */
+
+@media (max-width:1000px) {
+    main {
+        padding-top: 56px;
+    }
+}
+
 html {
     overflow: auto;
 }
 
 body {
     overflow: hidden;
+    height: 100%;
 }
 
 header {
