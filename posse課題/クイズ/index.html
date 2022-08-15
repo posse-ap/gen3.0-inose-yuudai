@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconntent" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
     <title>quiz</title>
 </head>
 
@@ -44,358 +46,22 @@
 
 
     <main>
-        <div class="header-image">
-            <img src="imgs/Main visual.png" width="100%" height="auto">
-        </div>
-        <section class="quiz">
-            <ul>
-                <li class="q-and-a js-quiz" data-quiz="0">
-                    <div class="question_construct_all">
-                        <h3 class="q_image_quiz_text">
-                            <span class="q-a-label">
-                                Q1
-                            </span>
-                            <span class="q-text">
-                                日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？
-                            </span>
-                        </h3>
-                        <figure class="question-image">
-                            <img src="imgs/img-quiz01.png">
-                        </figure>
-                    </div>
-                    <div class="answer">
-                        <span class="q-a-label q-a-label-accent">
-                            A
-                        </span>
-
-                        <ul class="choices " id="full-target">
-                            <li class="choice">
-                                <button class="choice-button  js-answer" data-answer="0" id="1-f11">
-                                <div>約28万人 </div>
-                                <div class="black-check"><img src="imgs/Polygon 1.svg" alt=""></div>
-                                </button>
-                            </li>
-                            <li class="choice ">
-                                <button class="choice-button  js-answer" data-answer="1" id="1-t">
-                                <div>約79万人 </div>
-                                <i class="black-check">
-                                    
-                                </i><div class="black-check"><img src="imgs/Polygon 1.svg" alt=""></div>
-                            </button>
-                            </li>
-                            <li class="choice  ">
-                                <button class="choice-button  js-answer" data-answer="2" id="1-f12">
-                                <div>約183万人 </div>
-                                <div class="black-check"><img src="imgs/Polygon 1.svg" alt=""></div>
-                            </button>
-                            </li>
-                        </ul>
-                        <!-- <p class="commentary js-answerTitle">
-                            <div class="cc  " id="target">
-                                <div class="commentary-text">
-                                    <div class="true-or-false">正解！</div> <br>
-                                    <div class="answer_detail">A&nbsp; &nbsp; 約79万人</div>
-                                </div>
-                            </div>
-                            <div class="ci" id="target-false">
-                                <div class="commentary-text">
-                                    <div class="true-or-false">不正解....</div> <br>
-                                    <div class="answer_detail">A&nbsp; &nbsp; 約79万人</div>
-                                </div>
-                            </div>
-                        </p> -->
-                    </div>
-                    <cite class="href">
-                        <i class="mark"><img src="imgs/icon-note.png" alt=""></i>
-                        経済産業省 2019年3月 － IT 人材需給に関する調査
-
-                    </cite>
-                </li>
-
-
-
-
-                <li class="q-and-a">
-                    <div class="q-number">
-                        <img src="imgs/Q2.png">
-                    </div>
-                    <div class="other-than-question-number">
-                        <article class="question-2">
-
-                            <p class="q-text">
-                                既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？
-                            </p>
-                            <div class="question-image">
-                                <img src="imgs/Q2image.png" alt="" width="718" height="357">
-                            </div>
-                        </article>
-                        <article class="answer">
-                            <div class="a-mark">
-                                <img src="imgs/A.png" alt="">
-                            </div>
-                            <div class="choices-href"></div>
-                            <div class="choices  " id="full-target2">
-                                <div class="choice " id="2-f1">
-                                    <div>INTECH</div>
-                                    <div class="black-check"><img src="imgs/Polygon 1.svg" alt=""></div>
-                                </div>
-                                <div class="choice " id="2-f2">
-                                    <div>BIZZTECH </div>
-                                    <div class="black-check"><img src="imgs/Polygon 1.svg" alt=""></div>
-                                </div>
-                                <div class="choice " id="2-t">
-                                    <div>X-TECH </div>
-                                    <div class="black-check"><img src="imgs/Polygon 1.svg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="commentary">
-                                <div class="cc " id="target2">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">正解！</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; X-TECH</div>
-                                    </div>
-                                </div>
-                                <div class="ci " id="target-false2">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">不正解....</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; X-TECH</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </li>
-
-
-                <li class="q-and-a">
-                    <div class="q-number">
-                        <img src="imgs/Q3.png">
-                    </div>
-                    <div class="other-than-question-number">
-                        <article class="question-3">
-
-                            <p class="q-text">
-                                IoTとは何の略でしょう？
-                            </p>
-                            <div class="question-image">
-                                <img src="imgs/Q3image.png" alt="" width="718" height="357">
-                            </div>
-                        </article>
-                        <article class="ansewr">
-                            <div class="a-mark">
-                                <img src="imgs/A.png" alt="">
-                            </div>
-                            <div class="choices-href"></div>
-                            <div class="choices " id="full-target3">
-                                <div class="choice " id="3-t">
-                                    <div>Internet of Things </div>
-                                    <div class="black-check"><img src="imgs/Polygon 1.svg" alt=""></div>
-                                </div>
-                                <div class="choice " id="3-f1">
-                                    <div>Integrate into Technology </div>
-                                    <div class="black-check"><img src="imgs/Polygon 1.svg" alt=""></div>
-                                </div>
-                                <div class="choice " id="3-f2">
-                                    <div>Information on Tool </div>
-                                    <div class="black-check"><img src="imgs/Polygon 1.svg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="commentary">
-                                <div class="cc " id="target3">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">正解！</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; Internet of Things</div>
-                                    </div>
-                                </div>
-                                <div class="ci " id="target-false3">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">不正解....</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; Internet of Things</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </li>
-
-
-                <li class="q-and-a">
-                    <div class="q-number">
-                        <img src="imgs/Q4.png">
-                    </div>
-                    <div class="other-than-question-number">
-                        <article class="question-4">
-
-                            <p class="q-text">
-                                日本が目指すサイバー空間とフィジカル空間を高度に融合させたシステムによって開かれる未来社会のことをなんと言うでしょうか？
-                            </p>
-                            <div class="question-image">
-                                <img src="imgs/Q4image.png" width="718 " height="357 ">
-                            </div>
-                        </article>
-                        <article class="ansewr ">
-                            <div class="a-mark ">
-                                <img src="imgs/A.png " alt=" ">
-                            </div>
-                            <div class="choices-href "></div>
-                            <div class="choices  " id="full-target4">
-                                <div class="choice  " id="4-t">
-                                    <div> Society 5.0</div>
-                                    <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
-                                </div>
-                                <div class="choice " id="4-f1">
-                                    <div>CyPhy </div>
-                                    <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
-                                </div>
-                                <div class="choice " id="4-f2">
-                                    <div>SDGs </div>
-                                    <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
-                                </div>
-                            </div>
-                            <div class="commentary">
-                                <div class="cc " id="target4">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">正解！</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; Society 5.0</div>
-                                    </div>
-                                </div>
-                                <div class="ci " id="target-false4">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">不正解....</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; Society 5.0</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="href">
-                            <div class="mark"><img src="imgs/icon-note.png" alt=""></div>
-                            <cite class="href-text">Society5.0 - 科学技術政策 - 内閣府</cite>
-                        </article>
-                    </div>
-                </li>
-
-
-                <li class="q-and-a">
-                    <div class="q-number ">
-                        <img src="imgs/Q5.png">
-                    </div>
-                    <div class="other-than-question-number">
-                        <article class="question-5 ">
-
-                            <p class="q-text ">
-                                イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？
-                            </p>
-                            <div class="question-image ">
-                                <img src="imgs/Q5image.png" alt=" " width="718 " height="357 ">
-                            </div>
-                        </article>
-                        <article class="ansewr ">
-                            <div class="a-mark ">
-                                <img src="imgs/A.png " alt=" ">
-                            </div>
-                            <div class="choices-href "></div>
-                            <div class="choices  " id="full-target5">
-                                <div class="choice " id="5-t">
-                                    <div>Web3.0 </div>
-                                    <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
-                                </div>
-                                <div class="choice " id="5-f1">
-                                    <div>NFT </div>
-                                    <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
-                                </div>
-                                <div class="choice  " id="5-f2">
-                                    <div>メタバース </div>
-                                    <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
-                                </div>
-                            </div>
-                            <div class="commentary">
-                                <div class="cc " id="target5">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">正解！</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; Web3.0</div>
-                                    </div>
-                                </div>
-                                <div class="ci " id="target-false5">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">不正解....</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; Web3.0</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </li>
-
-
-                <li class="q-and-a">
-                    <div class="q-number ">
-                        <img src="imgs/Q6.png">
-                    </div>
-                    <div class="other-than-question-number">
-                        <article class="question-6 ">
-
-                            <p class="q-text ">
-                                先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？
-                            </p>
-                            <div class="question-image ">
-                                <img src="imgs/Q6image.png" alt=" " width="718 " height="357 ">
-                            </div>
-                        </article>
-                        <article class="ansewr">
-                            <div class="a-mark ">
-                                <img src="imgs/A.png " alt=" ">
-                            </div>
-                            <div class="choices-href "></div>
-                            <div class="choices " id="full-target6">
-                                <div class="choice " id="6-f1">
-                                    <div>約２倍 </div>
-                                    <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
-                                </div>
-                                <div class="choice  " id="6-t">
-                                    <div>約５倍 </div>
-                                    <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
-                                </div>
-                                <div class="choice " id="6-f2">
-                                    <div>約１１倍 </div>
-                                    <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
-                                </div>
-                            </div>
-                            <div class="commentary">
-                                <div class="cc " id="target6">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">正解！</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; 約５倍 </div>
-                                    </div>
-                                </div>
-                                <div class="ci " id="target-false6">
-                                    <div class="commentary-text">
-                                        <div class="true-or-false">不正解....</div> <br>
-                                        <div class="answer_detail">A&nbsp; &nbsp; 約５倍 </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <cite class="href">
-                        <div class="mark"><img src="imgs/icon-note.png" alt=""></div>
-                        <div class="href-text">Accenture Technology Vision 2021 </div>
-                    </cite>
-                    </div>
-                </li>
-            </ul>
-
-
+        <section class="header-image">
+            <img src="imgs/Main visual.png" width="100%">
         </section>
 
+        <div class="p-quiz-container l-container" id="js-quizContainer">
 
-        <div class="line-fixed">
-            <a href="https://line.me/R/ti/p/@651htnqp?from=page"><img src="imgs/fixed-banner.png" alt=""></a>
+        </div>
+        <div class="line-fixed ">
+            <a href="https://line.me/R/ti/p/@651htnqp?from=page "><img src="imgs/fixed-banner.png " alt=" "></a>
         </div>
 
         <section class="line ">
             <article class="detail-posse ">
                 <div class="detail-posse-text ">
                     <h2>
-                        <div class="line-icon "><img src="imgs/icon-line.png " alt="ライン height=" 40px length="40px "></div>
+                        <div class="line-icon "><img src="imgs/icon-line.png " alt="ライン height=" 40px length=" 40px "></div>
                         POSSE 公式LINE
                     </h2>
                     <p>
@@ -403,8 +69,8 @@
                         <br>詳細やPOSSE最新情報につきましては、公式LINEにてお知らせ致しますので
                         <br>下記ボタンより友達追加をお願いします!
                     </p>
-                    <div class="line-add-and-icon-link">
-                        <a href="https://line.me/R/ti/p/@651htnqp?from=page" class="detail-posse-line-add-text">LINE追加<img src="imgs/icon-link.png" alt="" class="icon-link"></a>
+                    <div class="line-add-and-icon-link ">
+                        <a href="https://line.me/R/ti/p/@651htnqp?from=page " class="detail-posse-line-add-text ">LINE追加<img src="imgs/icon-link.png " alt=" " class="icon-link "></a>
 
 
 
@@ -436,8 +102,493 @@
                 <small>&copy; 2022 POSSE</small>
             </div>
         </footer>
-        <script src="js/quiz.js "></script>
     </main>
+    <script src="js/quiz.js "></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+<!-- <section class="q-and-a js-quiz" data-quiz="0">
+                <div class="question_construct_all">
+                    <h3 class="q_image_quiz_text">
+                        <span class="q-a-label">
+                                
+                            </span>
+                        <span class="q-text">
+                                日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？
+                            </span>
+                    </h3>
+                    <figure class="question-image">
+                        <img src="imgs/img-quiz01.png">
+                    </figure>
+                </div>
+                <div class="answer">
+                    <span class="q-a-label q-a-label-accent">
+                            A
+                        </span>
+
+                    <ul class="choices">
+                        <li class="choice">
+                            <button class="choice-button  js-answer " data-answer="0">
+                                
+        <i class="black-check"><img src="imgs/Polygon 1.svg" alt=""></i>
+
+
+        </button>
+                        </li>
+                        <li class="choice">
+                            <button class="choice-button js-answer" data-answer="1"> 
+                                
+                                <i class="black-check">
+                                <img src="imgs/Polygon 1.svg" alt=""></i>
+                            </button>
+                        </li>
+                        <li class="choice">
+                            <button class="choice-button js-answer" data-answer="2">
+                                
+                                <i class="black-check"><img src="imgs/Polygon 1.svg" alt=""></i>
+                                </button>
+                        </li>
+                    </ul>
+
+                    <div class="p-quiz-box__answer__correct js-answerBox  ">
+
+
+                        <p class="commentary js-answerTitle ">
+
+                        </p>
+                        <p class="answer-contents">
+                            <span class="answer-contents-label">A</span>
+                            <span class="js-answerText"></span>
+                        </p>
+                    </div>
+                </div>
+                <cite class="href ">
+                        <i class="mark "><img src="imgs/icon-note.png"></i>
+                        経済産業省 2019年3月 － IT 人材需給に関する調査
+
+                    </cite>
+            </section> -->
+
+
+
+
+<!-- <section class="q-and-a js-quiz" data-quiz="1">
+                <div class="question_construct_all">
+                    <h3 class="q_image_quiz_text">
+                        <span class="q-a-label">
+                                        Q2
+                                    </span>
+                        <span class="q-text">
+                                既存業界のビジネスと、 先進的なテクノロジーを結びつけて生まれた、 新しいビジネスのことをなんと言うでしょう
+                                    </span>
+                    </h3>
+                    <figure class="question-image">
+                        <img src="imgs/img-quiz02.png">
+                    </figure>
+                </div>
+                <div class="answer">
+                    <span class="q-a-label q-a-label-accent">
+                                    A
+                                </span>
+
+                    <ul class="choices ">
+                        <li class="choice">
+                            <button class="choice-button  js-answer" data-answer="0">
+                                            
+                                            INTECH
+                                        <i class="black-check"><img src="imgs/Polygon 1.svg" alt=""></i>
+        
+                                        </button>
+                        </li>
+                        <li class="choice">
+                            <button class="choice-button  js-answer " data-answer="1"> 
+                                        
+                                    BIZZTECH
+                                        <i class="black-check">
+                                        <img src="imgs/Polygon 1.svg" alt=""></i>
+                                    </button>
+                        </li>
+                        <li class="choice">
+                            <button class="choice-button  js-answer " data-answer="2">
+                                    X - TECH 
+                                        <i class="black-check"><img src="imgs/Polygon 1.svg" alt=""></i>
+                                        </button>
+                        </li>
+                    </ul>
+
+                    <div class=" p-quiz-box-answer-correct js-answerBox ">
+                        <p class="commentary js-answerTitle ">
+                        </p>
+                        <p class="answer-contents ">
+                            <span class="answer-contents-label ">A</span>
+                            <span class="js-answer-text "></span>
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+
+
+
+
+            <li class="q-and-a ">
+                <div class="q-number ">
+                    <img src="imgs/Q2.png ">
+                </div>
+                <div class="other-than-question-number ">
+                    <article class="question-2 ">
+
+                        <p class="q-text ">
+                            既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？
+                        </p>
+                        <div class="question-image ">
+                            <img src="imgs/Q2image.png " alt=" " width="718 " height="357 ">
+                        </div>
+                    </article>
+                    <article class="answer ">
+                        <div class="a-mark ">
+                            <img src="imgs/A.png " alt=" ">
+                        </div>
+                        <div class="choices-href "></div>
+                        <div class="choices " id="full-target2 ">
+                            <div class="choice " id="2-f1 ">
+                                <div>INTECH</div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="2-f2 ">
+                                <div>BIZZTECH </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="2-t ">
+                                <div>X-TECH </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                        </div>
+                        <div class="commentary ">
+                            <div class="cc " id="target2 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">正解！</div> <br>
+                                    <div class="answer_detail ">A&nbsp; &nbsp; X-TECH</div>
+                                </div>
+                            </div>
+                            <div class="ci " id="target-false2 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">不正解....</div> <br>
+                                    <div class="answer_detail ">A&nbsp; &nbsp; X-TECH</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </li>
+
+
+            <li class="q-and-a ">
+                <div class="q-number ">
+                    <img src="imgs/Q3.png ">
+                </div>
+                <div class="other-than-question-number ">
+                    <article class="question-3 ">
+
+                        <p class="q-text ">
+                            IoTとは何の略でしょう？
+                        </p>
+                        <div class="question-image ">
+                            <img src="imgs/Q3image.png " alt=" " width="718 " height="357 ">
+                        </div>
+                    </article>
+                    <article class="ansewr ">
+                        <div class="a-mark ">
+                            <img src="imgs/A.png " alt=" ">
+                        </div>
+                        <div class="choices-href "></div>
+                        <div class="choices " id="full-target3 ">
+                            <div class="choice " id="3-t ">
+                                <div>Internet of Things </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="3-f1 ">
+                                <div>Integrate into Technology </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="3-f2 ">
+                                <div>Information on Tool </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                        </div>
+                        <div class="commentary ">
+                            <div class="cc " id="target3 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">正解！</div> <br>
+                                    <p class="answer-contents ">
+                                        <span class="answer-contents-label ">A</span>
+                                        <span class="js-answertext ">Internet of Things
+                                            </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ci " id="target-false3 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">不正解....</div> <br>
+                                    <div class="answer_detail ">A&nbsp; &nbsp; Internet of Things</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </li>
+
+
+            <li class="q-and-a ">
+                <div class="q-number ">
+                    <img src="imgs/Q4.png ">
+                </div>
+                <div class="other-than-question-number ">
+                    <article class="question-4 ">
+
+                        <p class="q-text ">
+                            日本が目指すサイバー空間とフィジカル空間を高度に融合させたシステムによって開かれる未来社会のことをなんと言うでしょうか？
+                        </p>
+                        <div class="question-image ">
+                            <img src="imgs/Q4image.png " width="718 " height="357 ">
+                        </div>
+                    </article>
+                    <article class="ansewr ">
+                        <div class="a-mark ">
+                            <img src="imgs/A.png " alt=" ">
+                        </div>
+                        <div class="choices-href "></div>
+                        <div class="choices " id="full-target4 ">
+                            <div class="choice " id="4-t ">
+                                <div> Society 5.0</div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="4-f1 ">
+                                <div>CyPhy </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="4-f2 ">
+                                <div>SDGs </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                        </div>
+                        <div class="commentary ">
+                            <div class="cc " id="target4 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">正解！</div> <br>
+                                    <div class="answer_detail ">A&nbsp; &nbsp; Society 5.0</div>
+                                </div>
+                            </div>
+                            <div class="ci " id="target-false4 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">不正解....</div> <br>
+                                    <div class="answer_detail ">A&nbsp; &nbsp; Society 5.0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="href ">
+                        <div class="mark "><img src="imgs/icon-note.png " alt=" "></div>
+                        <cite class="href-text ">Society5.0 - 科学技術政策 - 内閣府</cite>
+                    </article>
+                </div>
+            </li>
+
+
+            <li class="q-and-a ">
+                <div class="q-number ">
+                    <img src="imgs/Q5.png ">
+                </div>
+                <div class="other-than-question-number ">
+                    <article class="question-5 ">
+
+                        <p class="q-text ">
+                            イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？
+                        </p>
+                        <div class="question-image ">
+                            <img src="imgs/Q5image.png " alt=" " width="718 " height="357 ">
+                        </div>
+                    </article>
+                    <article class="ansewr ">
+                        <div class="a-mark ">
+                            <img src="imgs/A.png " alt=" ">
+                        </div>
+                        <div class="choices-href "></div>
+                        <div class="choices " id="full-target5 ">
+                            <div class="choice " id="5-t ">
+                                <div>Web3.0 </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="5-f1 ">
+                                <div>NFT </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="5-f2 ">
+                                <div>メタバース </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                        </div>
+                        <div class="commentary ">
+                            <div class="cc " id="target5 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">正解！</div> <br>
+                                    <div class="answer_detail ">A&nbsp; &nbsp; Web3.0</div>
+                                </div>
+                            </div>
+                            <div class="ci " id="target-false5 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">不正解....</div> <br>
+                                    <div class="answer_detail ">A&nbsp; &nbsp; Web3.0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </li>
+
+
+            <li class="q-and-a ">
+                <div class="q-number ">
+                    <img src="imgs/Q6.png ">
+                </div>
+                <div class="other-than-question-number ">
+                    <article class="question-6 ">
+
+                        <p class="q-text ">
+                            先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？
+                        </p>
+                        <div class="question-image ">
+                            <img src="imgs/Q6image.png " alt=" " width="718 " height="357 ">
+                        </div>
+                    </article>
+                    <article class="ansewr ">
+                        <div class="a-mark ">
+                            <img src="imgs/A.png " alt=" ">
+                        </div>
+                        <div class="choices-href "></div>
+                        <div class="choices " id="full-target6 ">
+                            <div class="choice " id="6-f1 ">
+                                <div>約２倍 </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="6-t ">
+                                <div>約５倍 </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                            <div class="choice " id="6-f2 ">
+                                <div>約１１倍 </div>
+                                <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+                            </div>
+                        </div>
+                        <div class="commentary ">
+                            <div class="cc " id="target6 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">正解！</div> <br>
+                                    <div class="answer_detail ">A&nbsp; &nbsp; 約５倍 </div>
+                                </div>
+                            </div>
+                            <div class="ci " id="target-false6 ">
+                                <div class="commentary-text ">
+                                    <div class="true-or-false ">不正解....</div> <br>
+                                    <div class="answer_detail ">A&nbsp; &nbsp; 約５倍 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <cite class="href ">
+                        <div class="mark "><img src="imgs/icon-note.png " alt=" "></div>
+                        <div class="href-text ">Accenture Technology Vision 2021 </div>
+                    </cite>
+                </div>
+            </li> -->
+
+
+
+
+<!-- 
+    <ul class="choices " id="full-target ">
+        <li class="choice ">
+            <button class="choice-button js-answer " data-answer="0 " id="1-f11 ">
+                
+    約28万人
+    <i class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></i>
+
+    
+    </button>
+        </li>
+        <li class="choice ">
+            <button class="choice-button js-answer " data-answer="1 " id="1-t ">
+            <div>約79万人 </div>
+            <i class="black-check ">
+                
+            </i><div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+        </button>
+        </li>
+        <li class="choice ">
+            <button class="choice-button js-answer " data-answer="2 " id="1-f12 ">
+            <div>約183万人 </div>
+            <div class="black-check "><img src="imgs/Polygon 1.svg " alt=" "></div>
+        </button>
+        </li>
+    </ul> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="cc " id="target ">
+                <div class="commentary-text ">
+                    <div class="true-or-false ">正解！</div> <br>
+                    <p class="answer-contents ">
+                        <span class="answer-contents-label ">A</span>
+                        <span class="js-answer-text ">約79万人</span>
+                    </p>
+                </div>
+            </div>
+            <div class="ci " id="target-false ">
+                <div class="commentary-text ">
+                    <div class="true-or-false ">不正解....</div> <br>
+                    <div class="answer_detail ">A&nbsp; &nbsp; 約79万人</div>
+                </div>
+            </div> -->
+
+
+
+
+
+<!-- <p class="commentary js-answerTitle ">
+        <div class="cc " id="target ">
+            <div class="commentary-text ">
+                <div class="true-or-false ">正解！</div> <br>
+                <p class="answer-contents ">
+                    <span class="answer-contents-label ">A</span>
+                    <span class="js-answer-text ">約79万人</span>
+                </p>
+            </div>
+        </div>
+        <div class="ci " id="target-false ">
+            <div class="commentary-text ">
+                <div class="true-or-false ">不正解....</div> <br>
+                <div class="answer_detail ">A&nbsp; &nbsp; 約79万人</div>
+            </div>
+        </div> -->
