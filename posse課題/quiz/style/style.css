@@ -3,22 +3,42 @@
         @media (max-width:1000px) {
             main {
                 width: 100px;
-                padding-top: 50px;
             }
         }
         
-        @media (max-width:374px) {
+        @media (max-width:640px) {
             .menu-link,
             .Twitter,
             .instagram {
                 display: none;
             }
         }
-        /* @media (min-width:375px) {
+        
+        @media (min-width:641px) {
             .hamburger {
                 display: none;
             }
+        }
+        
+        @media(max-width:840px) {
+            .header-image {
+                width: 100vh;
+            }
+        }
+        /* @media all {
+            img {
+                max-width: 100vw;
+            }
         } */
+        /* @media (max-width:640px) {
+            .header-image {
+                width: 100%;
+            }
+        } */
+        
+        .hamburger {
+            margin-right: 24px;
+        }
         
         body {
             height: 100%;
@@ -26,7 +46,12 @@
         
         img {
             max-width: 100%;
+            height: auto;
         }
+        /* .header-image {
+            max-width: 100vw;
+        }
+         */
         
         header {
             display: flex;
@@ -81,7 +106,10 @@
         }
         
         .header-image {
-            padding-top: 80px;
+            /* padding-top: 80px;
+            margin-right: calc(50% - 50vw);
+            margin-left: calc(50% - 50vw); */
+            background-image: url()
         }
         
         ul {
