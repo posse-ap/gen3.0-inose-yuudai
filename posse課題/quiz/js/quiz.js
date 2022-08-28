@@ -110,7 +110,7 @@
     <span class="js-answerText"></span>
     </p>
     </div>
-    
+
 </div>
 ${hrefHtml}
 </section>`
@@ -118,7 +118,7 @@ ${hrefHtml}
 
     /**
      *@description 配列の並び替え
-     *@param arrays { Array } 
+     *@param arrays { Array }
      *@returns { Array }
      */
     const shuffle = arrays => {
