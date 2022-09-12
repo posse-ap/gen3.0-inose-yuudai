@@ -1,0 +1,198 @@
+        /* 共通事項 */
+        
+        ul {
+            list-style-type: none;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            padding-inline-start: 0px;
+        }
+        
+        header {
+            align-items: center;
+            width: 100%;
+            height: 64px;
+            background-color: #FFFFFF;
+            z-index: 99;
+        }
+        
+        html {
+            box-sizing: border-box;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch
+        }
+        
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .menu {
+            display: flex;
+            gap: 30px;
+            text-align: center;
+            align-items: center;
+            margin-left: 150px;
+        }
+        
+        .header-logo {
+            align-items: center;
+        }
+        
+        .header-log {
+            /* margin-right: 10px; */
+            padding: 12px;
+            background: linear-gradient(to right, #0f71DC, #3ccfff);
+            margin: 10px 5%;
+            border-radius: 50px;
+            max-width: 220px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 15px 10px 55px 0 rgba(60, 194, 235, 0.8);
+            color: #FFFFFF;
+            align-items: center;
+        }
+        
+        .header-menu {
+            justify-content: space-between;
+            display: flex;
+        }
+        
+        .header-menu-week {
+            color: #97b9d1;
+        }
+        
+        body {
+            background-color: #F5F5F8
+        }
+        
+        .main {
+            margin: 0 auto;
+        }
+        
+        .log {
+            padding-top: 20px;
+            margin: 0 auto;
+            max-width: 1032px;
+            width: 100%;
+        }
+        
+        .graphs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .parameter {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            max-width: 100%;
+            width: 100%;
+        }
+        
+        .time {
+            max-width: 100%;
+        }
+        
+        .today,
+        .month,
+        .total {
+            padding: 30px;
+            background-color: #FFFFFF;
+            margin: 10px;
+            border-radius: 20px;
+        }
+        
+        .range {
+            color: #0F71BC;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        
+        .parameter-time {
+            font-size: 60px;
+            font-weight: bold;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            gap: 4px;
+        }
+        
+        .unit {
+            color: #c0c0c0;
+            font-size: 30px;
+        }
+        /* グラフ */
+        
+        .graph {
+            padding: 150px;
+            padding-bottom: 300px;
+            /* max-width: 30%; */
+            background-color: #FFFFFF;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+        
+        .circle-graphs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .language {
+            background-color: #FFFFFF;
+            border-radius: 20px;
+        }
+        
+        .content {
+            background-color: #FFFFFF;
+            border-radius: 20px;
+        }
+        
+        .graph-title {
+            padding: 20px 0 0 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .date {
+            font-weight: bold;
+            font-size: 18px;
+            /* margin: 0 auto;
+            justify-content: center; */
+            text-align: center;
+            padding-top: 100px;
+            /* position: absolute; */
+        }
+        
+        .date:before {
+            content: "\03c";
+            color: #0f71bc;
+            /* font-size: 2px; */
+        }
+        
+        .date:after {
+            content: "\03e";
+            color: #97b9d1;
+            /* font-size: 2px; */
+        }
+        /* モーダル */
+        
+        .modaal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            opacity: 0;
+            /*  */
+            display: none;
+        }
+        
+        .info {
+            width: 900px;
+            background-color: #FFFFFF;
+            z-index: 21212121;
+            margin: 100px 200px 50px 200px;
+        }
