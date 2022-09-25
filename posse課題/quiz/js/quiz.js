@@ -22,36 +22,40 @@
         },
         {
             id: 2,
-            question: '既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？',
-            answers: ['INTECH', 'BIZZTECH', 'X-TECH'],
+            question: "既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？",
+            answers: ["INTECH", "BIZZTECH", "X-TECH"],
             correctNumber: 2,
         },
         {
             id: 3,
-            question: 'IoTとは何の略でしょう？',
-            answers: ['Internet of Things', 'Integrate into Technology', 'Information on Tool'],
+            question: "IoTとは何の略でしょう？",
+            answers: [
+                "Internet of Things",
+                "Integrate into Technology",
+                "Information on Tool",
+            ],
             correctNumber: 0,
         },
         {
             id: 4,
-            question: 'イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？',
-            answers: ['Society 5.0', 'CyPhy', 'SDGs'],
+            question: "イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？",
+            answers: ["Society 5.0", "CyPhy", "SDGs"],
             correctNumber: 0,
-            href: 'Society5.0 - 科学技術政策 - 内閣府'
+            href: "Society5.0 - 科学技術政策 - 内閣府",
         },
         {
             id: 5,
-            question: 'イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？',
-            answers: ['Web3.0', 'NFT', 'メタバース'],
+            question: "イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？",
+            answers: ["Web3.0", "NFT", "メタバース"],
             correctNumber: 0,
         },
         {
             id: 6,
-            question: '先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？',
-            answers: ['約2倍', '約5倍', '約11倍'],
+            question: "先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？",
+            answers: ["約2倍", "約5倍", "約11倍"],
             correctNumber: 1,
-            href: 'Accenture Technology Vision 2021'
-        }
+            href: "Accenture Technology Vision 2021",
+        },
     ];
 
     /**
@@ -80,13 +84,16 @@
     <i class="black-check"><img src="imgs/Polygon 1.svg" alt="">
 </i>
 </button>
-    </li>`).join("");
+    </li>`
+            )
+            .join("");
 
         // 引用テキストの生成
         const hrefHtml = quizItem.href ?
             `<cite class="href">
     <i class="mark"><img src="imgs/icon-note.png"></i>${quizItem.href}
-</cite>` : '';
+</cite>` :
+            "";
 
         return `<section class="q-and-a js-quiz" data-quiz="${questionNumber}">
 <div class="question_construct_all">
@@ -113,37 +120,39 @@
 
 </div>
 ${hrefHtml}
-</section>`
-    }
+</section>`;
+    };
 
     /**
      *@description 配列の並び替え
      *@param arrays { Array }
      *@returns { Array }
      */
-    const shuffle = arrays => {
+    const shuffle = (arrays) => {
         const array = arrays.slice();
         for (let i = array.length - 1; i >= 0; i--) {
             const randomIndex = Math.floor(Math.random() * (i + 1));
             [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
         }
-        return array
-    }
+        return array;
+    };
 
     /**
      *@description quizArrayに並び替えたクイズを格納
      *@type { Array }
      */
-    const quizArray = shuffle(ALL_QUIZ)
+    const quizArray = shuffle(ALL_QUIZ);
 
     /**
      * @type {string}
      * @description 生成したクイズのHTMLを #js-quizContainer に挿入
      */
 
-    quizContainer.innerHTML = quizArray.map((quizItem, index) => {
-        return createQuizHtml(quizItem, index)
-    }).join("")
+    quizContainer.innerHTML = quizArray
+        .map((quizItem, index) => {
+            return createQuizHtml(quizItem, index);
+        })
+        .join("");
 
     /**
      * @type {NodeListOf<Element>}
@@ -155,11 +164,11 @@ ${hrefHtml}
      * @description buttonタグにdisabledを付与
      * @param answers {NodeListOf<Element>}
      */
-    const setDisabled = answers => {
-        answers.forEach(answer => {
+    const setDisabled = (answers) => {
+        answers.forEach((answer) => {
             answer.disabled = true;
-        })
-    }
+        });
+    };
 
     /**
      * @description trueかfalseで出力する文字列を出し分ける
@@ -168,7 +177,7 @@ ${hrefHtml}
      */
     const setTitle = (target, isCorrect) => {
         target.innerText = isCorrect ? "正解！" : "不正解...";
-    }
+    };
 
     /**
      * @description trueかfalseでクラス名を付け分ける
@@ -177,47 +186,38 @@ ${hrefHtml}
      */
     const setClassName = (target, isCorrect) => {
         target.classList.add(isCorrect ? "is-correct" : "is-incorrect");
-    }
+    };
 
     /**
      * 各問題の中での処理
      */
-    allQuiz.forEach(quiz => {
+    allQuiz.forEach((quiz) => {
         const answers = quiz.querySelectorAll(".js-answer");
         const selectedQuiz = Number(quiz.getAttribute("data-quiz"));
         const answerBox = quiz.querySelector(".js-answerBox");
         const answerTitle = quiz.querySelector(".js-answerTitle");
         const answerText = quiz.querySelector(".js-answerText");
 
-        answers.forEach(answer => {
+        answers.forEach((answer) => {
             answer.addEventListener("click", () => {
                 answer.classList.add("is-selected");
-                const selectedAnswerNumber = Number(answer.getAttribute("data-answer"));
-
+                answer.getAttribute("data-answer");
+                const selectedAnswerNumber = Number;
                 // 全てのボタンを非活性化
                 setDisabled(answers);
-
                 // 正解ならtrue, 不正解ならfalseをcheckCorrectに格納
-
-                const correctNumber = quizArray[selectedQuiz].correctNumber
+                const correctNumber = quizArray[selectedQuiz].correctNumber;
                 const isCorrect = correctNumber === selectedAnswerNumber;
-
                 // 回答欄にテキストやclass名を付与
                 answerText.innerText = quizArray[selectedQuiz].answers[correctNumber];
                 setTitle(answerTitle, isCorrect);
                 setClassName(answerBox, isCorrect);
-            })
-        })
-    })
+            });
+        });
+    });
 }
 
-
-
-
-
-
 // ↓自力で頑張った勲章。
-
 
 // function buttonClick() {
 //     button.classList.add("choice-true");
