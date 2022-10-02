@@ -11,18 +11,103 @@
 </head>
 
 <body>
-
     <header>
         <div class="header-menu">
             <div class="menu">
                 <img src="imgs/logo.png" class="header-logo">
-                <p class="header-menu-week">1st week</p>
+                <p class="header-menu-week">4th week</p>
             </div>
-            <div class="header-log">
+            <div class="header-log" id="open">
                 記録・投稿
             </div>
         </div>
+        <div id="mask" class="hidden"></div>
+        <section id="modal" class="hidden">
+            <div id="modal-content">
+                <div id="close">
+                    ✖️
+                </div>
+                <div id="loading"></div>
+                <div id="modal-otherthan-close">
+                    <div class="modal-log-list">
+                        <div class="day-content-language">
+                            <div class="modal-log-day">
+                                <p>学習日</p>
+                                <input class="day-textbox" type="date" placeholder="when" />
+                            </div>
+                            <div class="modal-log-content">
+                                <p>学習コンテンツ（複数選択可）</p>
+                                <div class="modal-content-list">
+                                    <div class="content-list-flex">
+                                        <p class="checkbox">
+                                            N予備校
+                                        </p>
+                                        <p class="checkbox">
+                                            ドットインストール
+                                        </p>
+                                    </div>
+                                    <p class="checkbox">
+                                        POSSE課題!!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-log-language">
+                                <p class="log-title">学習言語（複数選択可）</p>
+                                <div class="modal-language-list">
+                                    <div class="content-list-flex">
+                                        <p class="checkbox">
+                                            HTML
+                                        </p>
+                                        <p class="checkbox">
+                                            CSS
+                                        </p>
+                                        <p class="checkbox">
+                                            JavaScript
+                                        </p>
+                                    </div>
+                                    <div class="content-list-flex">
+                                        <p class="checkbox">
+                                            PHP
+                                        </p>
+                                        <p class="checkbox">
+                                            Laravel
+                                        </p>
+                                        <p class="checkbox">
+                                            SQL
+                                        </p>
+                                        <p class="checkbox">
+                                            SHELL
+                                        </p>
+                                    </div>
+                                    <p class="checkbox">
+                                        情報システム基礎知識（その他）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="time-twitter">
+                            学習時間
+                            <input class="time-textbox" type="text" placeholder="when" />
+                            <p class="log-title">Twitter用コメント</p>
+                            <div class="tweet">
+                                <input class="twitter-textbox" type="text" />
+                            </div>
+                            <div>
+                                <p class="log-title-twitter">twitterにシェアする</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="header-log" id="opened-log-and-submit">
+                        記録・投稿
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </header>
+
     <main>
         <div class="log">
             <section class="graphs">
@@ -31,40 +116,37 @@
                         <li>
                             <ul class="today">
                                 <li class="range">Today</li>
-                                <li class="parameter-time">10</li>
+                                <li class="parameter-time">3</li>
                                 <li class="unit">hour</li>
                             </ul>
                         </li>
                         <li>
                             <ul class="month">
                                 <li class="range">Month</li>
-                                <li class="parameter-time">10</li>
+                                <li class="parameter-time">120</li>
                                 <li class="unit">hour</li>
                             </ul>
                         </li>
                         <li>
                             <ul class="total">
                                 <li class="range">Total</li>
-                                <li class="parameter-time">10</li>
+                                <li class="parameter-time">1348</li>
                                 <li class="unit">hour</li>
                             </ul>
                         </li>
                     </ul>
                     <div class="graph">
-                        グラフだお！
+                        グラフ！
                     </div>
                 </article>
                 <article class="circle-graphs">
                     <div class="language">
                         <p class="graph-title">学習言語</p>
-                        <figure><img src="imgs/logo.png" alt="" width="100px" height="100px"></figure>
-
+                        <div class="circle-graph" id="circle-charts1"></div>
                     </div>
                     <div class="content">
                         <p class="graph-title">学習コンテンツ</p>
-                        <figure><img src="imgs/logo.png" alt="" width="100px" height="100px"></figure>
-
-
+                        <div class="circle-graph" id="circle-charts2"></div>
                     </div>
                 </article>
 
@@ -76,15 +158,15 @@
             </div>
         </div>
     </main>
-    <div class="modaal-wrapper">
-        <div class="info">
-            学習日
-
-        </div>
-    </div>
-
-    <div class="modaal-overlay" id="modaal_1661234884063794d1be3bc5a5_overlay" style="background: rgb(0, 0, 0);opacity: 0.8;"></div>
-
+    <script src="js/webapp.js" defer></script>
+    <!-- <script src="js/circle-graph.js" defer></script> -->
+    <script src="js/circle-graph2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" defer></script>
+    <script src="https://unpkg.com/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 
 </html>
