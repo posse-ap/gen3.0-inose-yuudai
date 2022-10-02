@@ -1,18 +1,6 @@
 "use strict";
 
 {
-    /**
-     * @typedef QUIZ
-     * @property {number} correctNumber 問題番号
-     * @property {string | undefined} note ノート
-     * @property {string} question 問題文
-     * @property {string[]} answers 回答の配列
-     */
-
-    /**
-     * @description 問題と回答の定数
-     * @type {QUIZ[]}
-     */
     const ALL_QUIZ = [{
             id: 1,
             question: "日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？",
@@ -58,42 +46,18 @@
         },
     ];
 
-    /**
-     * @description クイズコンテナーの取得
-     * @type {HTMLElement}
-     */
-    const quizContainer = document.getElementById("js-quizContainer");
-
-    /**
-     * @description クイズ１つ１つのHTMLを生成するための関数
-     * @param quizItem { QUIZ }
-     * @param questionNumber { number }
-     * @returns {string}
-     */
-
-    const createQuizHtml = (quizItem, questionNumber) => {
-        /**
-         * @description 回答の生成
-         * @type {string}
-         */
-        const answersHtml = quizItem.answers
-            .map(
-                (answer, answerIndex) => `<li class="choice">
+    const createQuizHtml = function(quizItem, questionNumber) {
+        const answersHtml = quizItem.answers.map(
+            (answer, answerIndex) => `<li class="choice">
         <button class="choice-button js-answer" data-answer="${answerIndex}">
         ${answer}
     <i class="black-check"><img src="imgs/Polygon 1.svg" alt="">
-</i>
-</button>
-    </li>`
-            )
-            .join("");
+</i></button></li>`).join("");
 
-        // 引用テキストの生成
         const hrefHtml = quizItem.href ?
             `<cite class="href">
     <i class="mark"><img src="imgs/icon-note.png"></i>${quizItem.href}
-</cite>` :
-            "";
+</cite>` : "";
 
         return `<section class="q-and-a js-quiz" data-quiz="${questionNumber}">
 <div class="question_construct_all">
@@ -123,11 +87,6 @@ ${hrefHtml}
 </section>`;
     };
 
-    /**
-     *@description 配列の並び替え
-     *@param arrays { Array }
-     *@returns { Array }
-     */
     const shuffle = (arrays) => {
         const array = arrays.slice();
         for (let i = array.length - 1; i >= 0; i--) {
@@ -137,180 +96,53 @@ ${hrefHtml}
         return array;
     };
 
-    /**
-     *@description quizArrayに並び替えたクイズを格納
-     *@type { Array }
-     */
     const quizArray = shuffle(ALL_QUIZ);
 
-    /**
-     * @type {string}
-     * @description 生成したクイズのHTMLを #js-quizContainer に挿入
-     */
+    const quizContainer = document.getElementById("js-quizContainer");
 
     quizContainer.innerHTML = quizArray
-        .map((quizItem, index) => {
-            return createQuizHtml(quizItem, index);
+        .map(function(quizItem, questionNumber) {
+            return createQuizHtml(quizItem, questionNumber);
         })
         .join("");
-
-    /**
-     * @type {NodeListOf<Element>}
-     * @description すべての問題を取得
-     */
     const allQuiz = document.querySelectorAll(".js-quiz");
 
-    /**
-     * @description buttonタグにdisabledを付与
-     * @param answers {NodeListOf<Element>}
-     */
-    const setDisabled = (answers) => {
-        answers.forEach((answer) => {
-            answer.disabled = true;
-        });
-    };
-
-    /**
-     * @description trueかfalseで出力する文字列を出し分ける
-     * @param target {Element}
-     * @param isCorrect {boolean}
-     */
-    const setTitle = (target, isCorrect) => {
-        target.innerText = isCorrect ? "正解！" : "不正解...";
-    };
-
-    /**
-     * @description trueかfalseでクラス名を付け分ける
-     * @param target {Element}
-     * @param isCorrect {boolean}
-     */
-    const setClassName = (target, isCorrect) => {
-        target.classList.add(isCorrect ? "is-correct" : "is-incorrect");
-    };
-
-    /**
-     * 各問題の中での処理
-     */
     allQuiz.forEach((quiz) => {
-        const answers = quiz.querySelectorAll(".js-answer");
         const selectedQuiz = Number(quiz.getAttribute("data-quiz"));
         const answerBox = quiz.querySelector(".js-answerBox");
         const answerTitle = quiz.querySelector(".js-answerTitle");
         const answerText = quiz.querySelector(".js-answerText");
+        const answers = quiz.querySelectorAll(".js-answer");
 
         answers.forEach((answer) => {
+            const setClassName = (target, isCorrect) => {
+                target.classList.add(isCorrect ? "is-correct" : "is-incorrect");
+            };
+            const setTitle = (target, isCorrect) => {
+                target.innerText = isCorrect ? "正解！" : "不正解...";
+            };
+            const setDisabled = (answers) => {
+                answers.forEach((answer) => {
+                    answer.disabled = true;
+                });
+            };
             answer.addEventListener("click", () => {
                 answer.classList.add("is-selected");
-                answer.getAttribute("data-answer");
-                const selectedAnswerNumber = Number;
+
+                const selectedAnswerNumber = Number(answer.getAttribute('data-answer'));
                 // 全てのボタンを非活性化
                 setDisabled(answers);
                 // 正解ならtrue, 不正解ならfalseをcheckCorrectに格納
                 const correctNumber = quizArray[selectedQuiz].correctNumber;
                 const isCorrect = correctNumber === selectedAnswerNumber;
+
                 // 回答欄にテキストやclass名を付与
                 answerText.innerText = quizArray[selectedQuiz].answers[correctNumber];
                 setTitle(answerTitle, isCorrect);
                 setClassName(answerBox, isCorrect);
             });
+
         });
+
     });
 }
-
-// ↓自力で頑張った勲章。
-
-// function buttonClick() {
-//     button.classList.add("choice-true");
-//     button11.classList.add("commentary-correct");
-// }
-
-// let button = document.getElementById("1-t");
-
-// button.onclick = buttonClick;
-
-// let button11 = document.getElementById("target");
-
-// //↑押したら正解が出る１問目 選択肢１
-
-// function buttonClick2() {
-//     button2.classList.add("choice-false");
-//     button12.classList.add("commentary-incorrect")
-// }
-
-// let button2 = document.getElementById("1-f11");
-
-// button2.onclick = buttonClick2;
-
-// let button12 = document.getElementById("target-false")
-
-// function buttonClick3() {
-//     button3.classList.add("choice-false");
-//     button13.classList.add("commentary-incorrect")
-
-// }
-
-// let button3 = document.getElementById("1-f12", );
-
-// button3.onclick = buttonClick3;
-
-// let button13 = document.getElementById("target-false")
-
-// //↑押した時に不正解が出る１問目 選択肢２、３
-
-// function buttonClick0() {
-//     button0.classList.add("choice-stop")
-// }
-// let button0 = document.getElementById("full-target");
-
-// button0.onclick = buttonClick0;
-
-// //↑押した時に他のやつを押せなくする１問目
-
-// //↓これ以降命名規則変える
-
-// function buttonClick21() {
-//     button211.classList.add("choice-true");
-//     button212.classList.add("commentary-correct");
-// }
-
-// let button211 = document.getElementById("2-t");
-
-// button211.onclick = buttonClick21;
-
-// let button212 = document.getElementById("target2");
-
-// //↑押したら正解が出る2問目 選択肢3
-
-// function buttonClick22() {
-//     button221.classList.add("choice-false");
-//     button222.classList.add("commentary-incorrect")
-// }
-
-// let button221 = document.getElementById("2-f1");
-
-// button221.onclick = buttonClick22;
-
-// let button222 = document.getElementById("target-false2")
-
-// function buttonClick23() {
-//     button231.classList.add("choice-false");
-//     button232.classList.add("commentary-incorrect")
-
-// }
-
-// let button231 = document.getElementById("2-f2");
-
-// button231.onclick = buttonClick23;
-
-// let button232 = document.getElementById("target-false2")
-
-// //↑押した時に不正解が出る2問目 選択肢1、2
-
-// function buttonClick20() {
-//     button20.classList.add("choice-stop")
-// }
-// let button20 = document.getElementById("full-target2");
-
-// button20.onclick = buttonClick20;
-
-// //↑押した時に他のやつを押せなくする2問目

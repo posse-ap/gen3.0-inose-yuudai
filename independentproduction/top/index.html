@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
     <title>independent production</title>
-
 </head>
 
 <body>
@@ -28,6 +27,7 @@
                 <div id="close">
                     ✖️
                 </div>
+                <div id="loading"></div>
                 <div id="modal-otherthan-close">
                     <div class="modal-log-list">
                         <div class="day-content-language">
@@ -142,11 +142,11 @@
                 <article class="circle-graphs">
                     <div class="language">
                         <p class="graph-title">学習言語</p>
-                        <figure><img src="imgs/logo.png" alt="" width="100px" height="100px"></figure>
+                        <div class="circle-graph" id="circle-charts1"></div>
                     </div>
                     <div class="content">
                         <p class="graph-title">学習コンテンツ</p>
-                        <figure><img src="imgs/logo.png" alt="" width="100px" height="100px"></figure>
+                        <div class="circle-graph" id="circle-charts2"></div>
                     </div>
                 </article>
 
@@ -158,11 +158,15 @@
             </div>
         </div>
     </main>
-    <script src="js/webapp.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-
+    <script src="js/webapp.js" defer></script>
+    <!-- <script src="js/circle-graph.js" defer></script> -->
+    <script src="js/circle-graph2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" defer></script>
+    <script src="https://unpkg.com/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 
 </html>
