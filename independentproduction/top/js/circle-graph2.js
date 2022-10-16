@@ -1,7 +1,7 @@
 'use strict';
 
 {
-    var options = {
+    let options = {
         series: [40, 20, 40],
         chart: {
             height: 500,

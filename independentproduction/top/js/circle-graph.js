@@ -55,12 +55,7 @@
                         offsetY: 0
                     }
                 },
-                // title: {
-                //     style: {
-                //         fontSize: '13px',
-                //         color: '#263238'
-                //     }
-                // },
+
                 chart: {},
                 legend: {
                     position: 'bottom',

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="ja">
 
 <head>
@@ -10,7 +10,7 @@
     <title>independent production</title>
 </head>
 
-<body>
+<body id="bodybody">
     <header>
         <div class="header-menu">
             <div class="menu">
@@ -22,92 +22,86 @@
             </div>
         </div>
         <div id="mask" class="hidden"></div>
-        <section id="modal" class="hidden">
-            <div id="modal-content">
-                <div id="close">
-                    ✖️
-                </div>
-                <div id="loading"></div>
-                <div id="modal-otherthan-close">
-                    <div class="modal-log-list">
-                        <div class="day-content-language">
-                            <div class="modal-log-day">
-                                <p>学習日</p>
-                                <input class="day-textbox" type="date" placeholder="when" />
-                            </div>
-                            <div class="modal-log-content">
-                                <p>学習コンテンツ（複数選択可）</p>
-                                <div class="modal-content-list">
-                                    <div class="content-list-flex">
-                                        <p class="checkbox">
-                                            N予備校
-                                        </p>
-                                        <p class="checkbox">
-                                            ドットインストール
-                                        </p>
+        <div class="modal-box">
+            <section id="modal" class="hidden">
+                <div id="modal-content">
+                    <div id="close">
+                        ×
+                    </div>
+                    <div id="loading"></div>
+                    <div id="modal-otherthan-close">
+                        <div class="modal-log-list">
+                            <div class="day-content-language">
+                                <div class="modal-log-day">
+                                    <p>学習日</p>
+                                    <input class="day-textbox" type="date" placeholder="when" />
+                                </div>
+                                <div class="modal-log-content">
+                                    <p>学習コンテンツ（複数選択可）</p>
+                                    <div class="modal-content-list">
+                                        <div class="content-list-flex">
+                                            <span class="checkbox">
+                                                N予備校
+                                            </span>
+                                            <span class="checkbox">
+                                                ドットインストール
+                                            </span>
+                                        </div>
+                                        <span class="checkbox" id="posse-assignment">
+                                            POSSE課題
+                                        </span>
                                     </div>
-                                    <p class="checkbox">
-                                        POSSE課題!!
-                                    </p>
+                                </div>
+                                <div class="modal-log-language">
+                                    <p class="log-title">学習言語（複数選択可）</p>
+                                    <div class="modal-language-list">
+                                        <input type="checkbox" id="check-html" class="input-checkbox" name="language" value="HTML"><label for="check-html" class="checkbox">HTML</label>
+                                        <input type="checkbox" id="check-css" class="input-checkbox" name="language" value="css"><label for="check-css" class="checkbox">css</label>
+                                        <input type="checkbox" id="check-JavaScript" class="input-checkbox" name="language" value="JavaScript"><label for="check-JavaScript" class="checkbox">JavaScript</label>
+                                        <input type="checkbox" id="check-PHP" class="input-checkbox" name="language" value="PHP"><label for="check-PHP" class="checkbox">  PHP</label>
+                                        <input type="checkbox" id="check-Laravel" class="input-checkbox" name="language" value="Laravel"><label for="check-Laravel" class="checkbox">Laravel</label>
+                                        <input type="checkbox" id="check-SQL" class="input-checkbox" name="language" value="SQL">
+                                        <div class="check-mark">&not;</div><label for="check-SQL" class="checkbox">SQL</label>
+                                        <input type="checkbox" id="check-SHELL" class="input-checkbox" name="language" value="SHELL"><label for="check-SHELL" class="checkbox">SHELL</label>
+                                        <input type="checkbox" id="check-other" class="input-checkbox" name="language" value="other"><label for="check-other" class="checkbox">情報システム基礎知識（その他）</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="modal-log-language">
-                                <p class="log-title">学習言語（複数選択可）</p>
-                                <div class="modal-language-list">
-                                    <div class="content-list-flex">
-                                        <p class="checkbox">
-                                            HTML
-                                        </p>
-                                        <p class="checkbox">
-                                            CSS
-                                        </p>
-                                        <p class="checkbox">
-                                            JavaScript
-                                        </p>
+                            <div class="time-twitter">
+                                <p>学習時間</p>
+                                <input class="time-textbox" type="text" placeholder="when" />
+                                <p class="log-title">Twitter用コメント</p>
+                                <div class="tweet">
+                                    <textarea class="twitter-textbox" type="text" cols="40" rows="12" onkeyup="viewStrLen();"></textarea>
+                                    <script src="https://platform.twitter.com/widgets.js" defer></script>
+                                    <div class="share">
+                                        <input type="checkbox" id="check" class="input-checkbox js-twitter" name="twitter" value="twitter"><label for="check" class="log-title-twitter checkbox">Twitterにシェアする</label>
                                     </div>
-                                    <div class="content-list-flex">
-                                        <p class="checkbox">
-                                            PHP
-                                        </p>
-                                        <p class="checkbox">
-                                            Laravel
-                                        </p>
-                                        <p class="checkbox">
-                                            SQL
-                                        </p>
-                                        <p class="checkbox">
-                                            SHELL
-                                        </p>
-                                    </div>
-                                    <p class="checkbox">
-                                        情報システム基礎知識（その他）
-                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="time-twitter">
-                            学習時間
-                            <input class="time-textbox" type="text" placeholder="when" />
-                            <p class="log-title">Twitter用コメント</p>
-                            <div class="tweet">
-                                <input class="twitter-textbox" type="text" />
-                            </div>
-                            <div>
-                                <p class="log-title-twitter">twitterにシェアする</p>
-                            </div>
+                        <div class="header-log" id="opened-log-and-submit" onclick="showLoad()">
+                            記録・投稿
+                        </div>
+                    </div>
+                    <article class="finish-sign" id="finish-finish">
+                        <span class="record-title">AWESOME!</span>
+                        <div class="check-mark-containor">
+                            <div class="check-mark">&not;</div>
+                        </div>
+                        <figure class="icon-check-done">
+                        </figure>
+
+                        <div class="record-text">記録・投稿<br>完了しました
+
+
                         </div>
 
-                    </div>
-
-                    <div class="header-log" id="opened-log-and-submit">
-                        記録・投稿
-                    </div>
+                    </article>
                 </div>
-            </div>
-
-        </section>
+            </section>
+        </div>
     </header>
-
     <main>
         <div class="log">
             <section class="graphs">
@@ -149,24 +143,25 @@
                         <div class="circle-graph" id="circle-charts2"></div>
                     </div>
                 </article>
-
             </section>
             <div>
                 <div class="date">
                     &nbsp; 2022年 10月&nbsp;
                 </div>
+
             </div>
         </div>
     </main>
     <script src="js/webapp.js" defer></script>
-    <!-- <script src="js/circle-graph.js" defer></script> -->
-    <script src="js/circle-graph2.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr">
+    <script src="js/loader.js" defer></script>
+    <!-- <script src="js/circle-graph.js " defer></script> -->
+    <script src="js/circle-graph2.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js " defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr ">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" defer></script>
-    <script src="https://unpkg.com/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js " defer></script>
+    <script src="https://unpkg.com/apexcharts/dist/apexcharts.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js " integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous "></script>
 </body>
 
 </html>

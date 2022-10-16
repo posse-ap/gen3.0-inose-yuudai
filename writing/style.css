@@ -140,7 +140,7 @@ main {
 }
 
 .header-q-image {
-    background-image: url(../imgs/MainVisual.jpg);
+    background-image: url(imgs/MainVisual.jpg);
     background-size: cover;
 }
 
@@ -414,7 +414,7 @@ h2 {
 .detail-posse-text {
     text-align: center;
     color: #ffffff;
-    background-image: url(../imgs/bg-line.jpg);
+    background-image: url(imgs/bg-line.jpg);
     background-size: cover;
     /* height: 358px; */
     padding: 68px 24px;
