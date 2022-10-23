@@ -4,65 +4,61 @@
     let options = {
         series: [40, 20, 40],
         chart: {
-            height: 500,
+            height: 400,
             type: 'donut',
+
         },
+
         stroke: {
             width: 0,
         },
         plotOptions: {
-            pie: {
-                donut: {
-                    size: '45px',
-                    labels: {
-                        show: true,
-                        total: {
-                            showAlways: false,
-                            show: false
-                        }
-                    }
+            doughnut: {
+                labels: {
+                    circle: {
+                        r: 5
+                    },
                 }
-            }
+            },
+
         },
+
+
+
         labels: ["N予備校", "ドットインストール", "POSSE課題"],
+        colors: ['#0445EC', '#0F70BC', '#20BDDE'],
 
-        colors: ['#0042e5', '#0070B9', '#01BDDB'],
-
-        states: {
-            hover: {
-                filter: 'none'
+        dataLabels: {
+            style: {
+                fontSize: '0.75rem',
             }
         },
 
         legend: {
             position: 'bottom',
-            horizontalAlign: 'left', //左寄せ
+            horizontalAlign: 'bottom',
             fontSize: '15px',
         },
+
+
 
         responsive: [{
             breakpoint: 480,
             options: {
-                plotOptions: {
-                    pie: {
-                        offsetY: 0,
-                    }
+                chart: {
+                    width: 200
                 },
-                title: {
-                    style: {
-                        fontSize: '13px',
-                        color: '#263238'
-                    }
-                },
-                chart: {},
                 legend: {
-                    position: 'bottom',
-                    fontSize: '8px',
+                    position: 'bottom'
                 }
             }
-        }]
+        }],
+        tooltips: { enabled: false },
     };
 
-    var chart = new ApexCharts(document.querySelector("#circle-charts2"), options);
+    let ctx = document.getElementById('circle-charts2')
+    let chart = new ApexCharts(ctx, options);
+
     chart.render();
+
 }
