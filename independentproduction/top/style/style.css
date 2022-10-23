@@ -164,7 +164,7 @@ p {
 /* -------------------右側の円グラフ-------------------- */
 
 .graph {
-    padding: 150px;
+    padding: 50px;
     /* padding-bottom: 300px; */
     /* max-width: 30%; */
     background-color: #FFFFFF;
@@ -200,7 +200,8 @@ p {
     /* margin: 0 auto;
             justify-content: center; */
     text-align: center;
-    padding-top: 100px;
+    padding-top: 70px;
+    padding-bottom: 30px;
     /* position: absolute; */
 }
 

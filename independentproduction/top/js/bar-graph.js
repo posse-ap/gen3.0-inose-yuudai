@@ -6,19 +6,14 @@
         chart: {
             height: 400,
             type: 'donut',
-
         },
-
         stroke: {
             width: 0,
         },
         plotOptions: {
             doughnut: {
-                labels: {
-
-                }
+                labels: {}
             },
-
         },
 
 
@@ -37,8 +32,6 @@
             fontSize: '15px',
         },
 
-
-
         responsive: [{
             breakpoint: 480,
             options: {
@@ -53,7 +46,7 @@
         tooltips: { enabled: false },
     };
 
-    let ctx = document.getElementById('circle-charts1')
+    let ctx = document.getElementById('bar-graph')
     let chart = new ApexCharts(ctx, options);
 
     chart.render();

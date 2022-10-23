@@ -50,7 +50,6 @@
         timerId = setTimeout(() => {
             loading.classList.remove("loader")
             clearTimeout(timerId);
-
         }, 3000);
         // 三秒で消える
         // finish__open.classList.add("open")
