@@ -76,4 +76,3 @@ document.getElementById('opened-log-and-submit').onclick = function() {
 //         const timeoutId = setTimeout(showTime, 3000);
 //     }
 //     showTime();
-// }
