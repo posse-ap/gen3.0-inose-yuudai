@@ -1,54 +1,84 @@
 'use strict';
 
-{
-    let options = {
-        series: [30, 20, 10, 5, 5, 20, 20, 10],
-        chart: {
-            height: 400,
-            type: 'donut',
+
+let options = {
+    series: [{
+        data: [3, 4, 5, 3, 0, 0, 4, 2, 2, 8, 8, 2, 2, 1, 7, 4, 4, 3, 3, 3, 2, 2, 6, 2, 2, 1, 1, 1, 7, 8]
+    }],
+    chart: {
+        height: 350,
+        type: 'bar',
+        toolbar: {
+            show: false
+        }
+    },
+
+
+    plotOptions: {
+        bar: {
+            columnWidth: '50%',
+            // ↑グラフの太さ
+            borderRadius: 5,
+            // ↑グラフの先っちょ丸くする
+        }
+    },
+
+    dataLabels: {
+        enabled: false
+    },
+
+    // グラフ一本一本には数値書き込まなくていいよ↑
+
+
+    xaxis: {
+        axisTicks: {
+            show: false
+                // x軸の区切りいらない
         },
-        stroke: {
-            width: 0,
-        },
-        plotOptions: {
-            doughnut: {
-                labels: {}
+
+        labels: {
+            formatter: function(value) {
+                if (value !== undefined) {
+                    const categories = value.split(" ")
+                    const day = categories[0]
+                    return day % 2 == 1 ? "" : value;
+                }
+            },
+            style: {
+                colors: '#6ba0f0'
             },
         },
+    },
 
 
-        labels: ["HTML", "CSS", "JavaScript", "PHP", "Laravel", "SQL", "SHELL", "情報システム基礎知識(その他)"],
-        colors: ['#0445EC', '#0F70BC', '#20BDDE', '#3CCEFE', '#B29EF3', '#6C46EB', '#4A17EF', '#3005C0'],
+    grid: {
+        yaxis: {
+            lines: {
+                show: false
+            },
+        },
+    },
 
-        dataLabels: {
+    yaxis: {
+        labels: {
+            formatter: function(value) {
+                return value + "h";
+            },
             style: {
-                fontSize: '0.75rem',
+                colors: '#6ba0f0',
             }
         },
+        type: 'category',
+        axisTicks: {
+            show: false,
+            width: 1,
+        }
+    },
 
-        legend: {
-            position: 'bottom',
-            horizontalAlign: 'bottom',
-            fontSize: '15px',
-        },
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+};
 
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }],
-        tooltips: { enabled: false },
-    };
 
-    let ctx = document.getElementById('bar-graph')
-    let chart = new ApexCharts(ctx, options);
 
-    chart.render();
-
-}
+let chart = new ApexCharts(document.querySelector("#bar-graph"), options);
+chart.render();

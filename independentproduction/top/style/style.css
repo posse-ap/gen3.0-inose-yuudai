@@ -1,10 +1,13 @@
 /* 共通事項 */
 
 body {
-    height: 100vh;
     /* overflow-x: hidden; */
     /* padding-right: 15px; */
     /* position: fixed; */
+    /* overflow-y: hidden; */
+    height: 100%;
+    width: 100%;
+    background-color: #F5F5F8;
     /* overflow-y: hidden; */
 }
 
@@ -33,8 +36,6 @@ header {
 
 html {
     box-sizing: border-box;
-    /* overflow-y: hidden; */
-    /* -webkit-overflow-scrolling: touch; */
 }
 
 html.overflow-hidden {
@@ -43,15 +44,9 @@ html.overflow-hidden {
     /* -webkit-overflow-scrolling: touch; */
 }
 
-body {
-    height: 100%;
-    width: 100%;
-    background-color: #F5F5F8;
-    /* overflow-y: hidden; */
-}
-
-.main {
+main {
     margin: 0 auto;
+    /* background-color: #0F71BC; */
 }
 
 textarea[type="text"] {
@@ -468,6 +463,16 @@ input[type=checkbox] {
     padding: 10px;
     margin-top: 8px;
     cursor: pointer;
+}
+
+.checkmark-true {
+    content: '';
+    width: 10px;
+    height: 5px;
+    border-left: 3px solid #9c9c9c;
+    border-bottom: 3px solid #9c9c9c;
+    transform: rotate(-45deg);
+    display: inline-block;
 }
 
 .content-list-flex {

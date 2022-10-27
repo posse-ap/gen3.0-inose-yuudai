@@ -42,8 +42,7 @@
         modal.classList.add("one-screen");
         body.classList.add('overflow-hidden')
             // 提出押したら画面が動かないようにする
-
-        //バツ印以外を消す
+            //バツ印以外を消す
         loading.classList.add("loader");
         // ぐるぐる君を表示
         let timerId
