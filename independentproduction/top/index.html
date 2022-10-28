@@ -39,10 +39,7 @@
                             <div class="day-content-language">
                                 <div class="modal-log-day">
                                     <p>学習日</p>
-                                    <article class="day-textbox" id="date">
-                                    </article>
-
-
+                                    <input class="day-textbox" id="date">
                                 </div>
                                 <div class="modal-log-content">
                                     <p class="log-title">学習コンテンツ（複数選択可）</p>
@@ -56,7 +53,7 @@
                                     <p class="log-title">学習言語（複数選択可）</p>
                                     <div class="modal-language-list">
                                         <input type="checkbox" id="check-html" class="input-checkbox" name="language" value="HTML"><label for="check-html" class="checkbox"><div class="checkmark-true"></div> HTML</label>
-                                        <input type="checkbox" id="check-css" class="input-checkbox" name="language" value="css"><label for="check-css" class="checkbox"><div class="checkmark-true"></div>css</label>
+                                        <input type="checkbox" id="check-css" class="input-checkbox" name="language" value="css"><label for="check-css" class="checkbox"><div class="checkmark-true"></div>CSS</label>
                                         <input type="checkbox" id="check-JavaScript" class="input-checkbox" name="language" value="JavaScript"><label for="check-JavaScript" class="checkbox"><div class="checkmark-true"></div>JavaScript</label>
                                         <input type="checkbox" id="check-PHP" class="input-checkbox" name="language" value="PHP"><label for="check-PHP" class="checkbox"><div class="checkmark-true"></div>PHP</label>
                                         <input type="checkbox" id="check-Laravel" class="input-checkbox" name="language" value="Laravel"><label for="check-Laravel" class="checkbox"><div class="checkmark-true"></div>Laravel</label>
@@ -103,9 +100,9 @@
                         <table id="calendar">
                             <thead>
                                 <tr>
-                                    <th id="prev">&laquo;</th>
-                                    <th id="title" colspan="5"></th>
-                                    <th id="next">&raquo;</th>
+                                    <th id="prev">&lt;</th>
+                                    <th id="title" colspan="5"> </th>
+                                    <th id="next">&gt;</th>
                                 </tr>
                                 <tr>
                                     <th>Sun</th>
@@ -121,6 +118,10 @@
                             </tbody>
 
                         </table>
+
+                        <div class="header-log" id="decide">
+                            決定
+                        </div>
                     </div>
 
 
@@ -135,7 +136,7 @@
                 <article class="time">
                     <ul class="parameter">
                         <li>
-                            <ul class="today">
+                            <ul class="todays">
                                 <li class="range">Today</li>
                                 <li class="parameter-time">3</li>
                                 <li class="unit">hour</li>

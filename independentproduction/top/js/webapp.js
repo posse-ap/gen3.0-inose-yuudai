@@ -30,6 +30,8 @@
         body.classList.remove('overflow-hidden');
         modal.classList.remove("one-screen");
         modal.classList.remove("one-screen2");
+        // finish__open.style.display = "none";
+        finish__open.classList.remove("open")
     });
 
     // モーダルをとじる
@@ -37,7 +39,9 @@
     mask.addEventListener('click', () => {
 
         close.click();
-        finish__open.style.display = "none";
+        // finish__open.style.display = "none";
+        finish__open.classList.remove("open")
+
         // バツ印以外押しても消えるよ！
     });
     const hide = document.getElementById("modal-otherthan-close")
@@ -65,9 +69,9 @@
             clearTimeout(timerId);
         }, 3000);
         // 三秒で消える
-        // finish__open.classList.add("open")
         setTimeout(function() {
             finish__open.classList.add("open")
+                // finish__open.style.display = "block";
         }, 3000);
         // 三秒たったら出す
     }, );

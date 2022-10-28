@@ -14,6 +14,7 @@ const mask = document.getElementById('mask');
 const calender__open = document.getElementById("date")
 const calender__display = document.getElementById("calendar")
 const back = document.getElementById("back")
+const decide = document.getElementById("decide")
 
 
 
@@ -21,8 +22,9 @@ const back = document.getElementById("back")
 
 back.addEventListener('click', () => {
     close.click();
-    finish__open.style.display = "none";
-    // バツ印以外押しても消えるよ！
+    // finish__open.style.display = "none";
+    finish__open.classList.remove("open")
+        // バツ印以外押しても消えるよ！
     modal.classList.remove('hidden');
     mask.classList.remove('hidden');
     finish__open.classList.remove("open")
@@ -37,6 +39,19 @@ mask.addEventListener('click', () => {
     close.click();
     finish__open2.classList.remove("open2")
         // バツ印以外押しても消えるよ！
+});
+
+
+decide.addEventListener('click', () => {
+
+    close.click();
+    // finish__open.style.display = "none";
+    finish__open.classList.remove("open")
+        // バツ印以外押しても消えるよ！
+    modal.classList.remove('hidden');
+    mask.classList.remove('hidden');
+    finish__open.classList.remove("open")
+    finish__open2.classList.remove("open2")
 });
 
 
@@ -86,7 +101,7 @@ document.getElementById('opened-log-and-submit').onclick = function() {
 }
 
 
-console.clear();
+// console.clear();
 
 
 {
@@ -116,8 +131,16 @@ console.clear();
     function getCalendarBody() {
         const dates = []; // date: 日付, day: 曜日
         const lastDate = new Date(year, month + 1, 0).getDate();
-
-        for (let i = 1; i <= lastDate; i++) {
+        const todayDate = today.getDate();
+        console.log(todayDate)
+        for (let i = 1; i < todayDate; i++) {
+            dates.push({
+                date: i,
+                isToday: false,
+                isDisabled: true,
+            });
+        }
+        for (let i = todayDate; i <= lastDate; i++) {
             dates.push({
                 date: i,
                 isToday: false,
@@ -156,7 +179,7 @@ console.clear();
     }
 
     function renderTitle() {
-        const title = `${year}/${String(month + 1).padStart(2, '0')}`;
+        const title = `${year}年${String(month + 1).padStart(2, '0')}月`;
         document.getElementById('title').textContent = title;
     }
 
@@ -187,6 +210,17 @@ console.clear();
                 }
 
                 tr.appendChild(td);
+
+
+                td.addEventListener("click", () => {
+                    const gettitle = document.getElementById("title");
+                    const getday = gettitle.innerHTML + td.innerHTML + "日";
+                    console.log(getday)
+                    const day_display = document.getElementById("date")
+                    day_display.value = getday
+                        // テキストボックスの場合はinnerhtmlじゃなくて.value
+
+                })
             });
             document.querySelector('tbody').appendChild(tr);
         });
@@ -218,12 +252,12 @@ console.clear();
         createCalendar();
     });
 
-    document.getElementById('today').addEventListener('click', () => {
-        year = today.getFullYear();
-        month = today.getMonth();
+    // document.getElementById('today').addEventListener('click', () => {
+    //     year = today.getFullYear();
+    //     month = today.getMonth();
 
-        createCalendar();
-    });
+    //     createCalendar();
+    // });
 
     createCalendar();
 }
