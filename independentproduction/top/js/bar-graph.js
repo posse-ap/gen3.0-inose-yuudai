@@ -3,8 +3,12 @@
 
 let options = {
     series: [{
+        name: '時間',
         data: [3, 4, 5, 3, 0, 0, 4, 2, 2, 8, 8, 2, 2, 1, 7, 4, 4, 3, 3, 3, 2, 2, 6, 2, 2, 1, 1, 1, 7, 8]
     }],
+    legend: {
+        display: false
+    },
     chart: {
         height: 350,
         type: 'bar',
@@ -14,12 +18,15 @@ let options = {
     },
 
 
+
+
     plotOptions: {
         bar: {
             columnWidth: '50%',
             // ↑グラフの太さ
             borderRadius: 5,
             // ↑グラフの先っちょ丸くする
+            endingShape: 'rounded'
         }
     },
 
@@ -32,21 +39,25 @@ let options = {
 
     xaxis: {
         axisTicks: {
-            show: false
-                // x軸の区切りいらない
+            show: false,
+            // x軸の区切りいらない
+            axisBorder: {
+                show: false
+            },
+
         },
 
         labels: {
             formatter: function(value) {
                 if (value !== undefined) {
-                    const categories = value.split(" ")
-                    const day = categories[0]
+
+                    let day = value.split(" ")
                     return day % 2 == 1 ? "" : value;
                 }
             },
             style: {
-                colors: '#6ba0f0'
-            },
+                colors: '#B5CDDE',
+            }
         },
     },
 
@@ -55,6 +66,7 @@ let options = {
         yaxis: {
             lines: {
                 show: false
+                    // 横線いらない
             },
         },
     },
@@ -65,7 +77,7 @@ let options = {
                 return value + "h";
             },
             style: {
-                colors: '#6ba0f0',
+                colors: '#B5CDDE',
             }
         },
         type: 'category',
@@ -76,6 +88,27 @@ let options = {
     },
 
     labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+
+
+    fill: {
+        colors: ["#0F71BB"],
+        type: 'gradient',
+        gradient: {
+            type: 'vertical',
+            gradientToColors: ['#74DAFF'],
+        }
+    },
+
+    responsive: [{
+        breakpoint: 768,
+        options: {
+
+            chart: {
+                height: 200,
+            }
+        },
+    }]
+
 };
 
 

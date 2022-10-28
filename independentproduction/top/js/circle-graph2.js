@@ -11,13 +11,19 @@
             width: 0,
         },
         plotOptions: {
-            doughnut: {
-                labels: {
-                    circle: {
-                        r: 5,
-                    },
+            pie: {
+                donut: {
+                    size: '55px',
+                    labels: {
+                        show: true,
+                        total: {
+                            showAlways: false,
+                            show: false,
+                            cutoutPercentage: 0,
+                        }
+                    }
                 }
-            },
+            }
         },
         labels: ["N予備校", "ドットインストール", "POSSE課題"],
         colors: ['#0445EC', '#0F70BC', '#20BDDE'],
@@ -32,7 +38,7 @@
             fontSize: '15px',
         },
         responsive: [{
-            breakpoint: 480,
+            breakpoint: 768,
             options: {
                 chart: {
                     width: 200
