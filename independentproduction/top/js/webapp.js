@@ -30,7 +30,7 @@
         body.classList.remove('overflow-hidden');
         modal.classList.remove("one-screen");
         modal.classList.remove("one-screen2");
-        // finish__open.style.display = "none";
+
         finish__open.classList.remove("open")
     });
 
@@ -39,7 +39,7 @@
     mask.addEventListener('click', () => {
 
         close.click();
-        // finish__open.style.display = "none";
+
         finish__open.classList.remove("open")
 
         // バツ印以外押しても消えるよ！
@@ -71,7 +71,7 @@
         // 三秒で消える
         setTimeout(function() {
             finish__open.classList.add("open")
-                // finish__open.style.display = "block";
+
         }, 3000);
         // 三秒たったら出す
     }, );
@@ -94,8 +94,10 @@
 
     function openTwitter() {
         const twitterText = document.getElementById("twitterarea").value;
+        // テキストを取得
         const turl = `http://twitter.com/intent/tweet?&text=` + twitterText
         window.open(turl, '_blank');
+        //blunk  新規ウィンドウにドキュメントを読み込む
     }
 
 

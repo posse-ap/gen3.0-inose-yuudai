@@ -3,17 +3,21 @@
 
 let options = {
     series: [{
-        name: '時間',
+        name: '時間', // グラフにホバーした時に出る名前
         data: [3, 4, 5, 3, 0, 0, 4, 2, 2, 8, 8, 2, 2, 1, 7, 4, 4, 3, 3, 3, 2, 2, 6, 2, 2, 1, 1, 1, 7, 8]
+            // 各グラフのデータ
     }],
-    legend: {
+    legend: // legend:出てくる文字のやつ
+    {
+
         display: false
     },
     chart: {
         height: 350,
         type: 'bar',
         toolbar: {
-            show: false
+            show: false // 自動で作られるハンバーガーメニューの生成を防ぐ
+
         }
     },
 
@@ -22,34 +26,27 @@ let options = {
 
     plotOptions: {
         bar: {
-            columnWidth: '50%',
-            // ↑グラフの太さ
-            borderRadius: 5,
-            // ↑グラフの先っちょ丸くする
-            endingShape: 'rounded'
+            columnWidth: '50%', // グラフの太さ
+
+            borderRadius: 5, // グラフの先っちょ丸くする
         }
     },
 
     dataLabels: {
-        enabled: false
+        enabled: false // グラフ一本一本には数値書き込まなくていいよ
     },
 
-    // グラフ一本一本には数値書き込まなくていいよ↑
+
 
 
     xaxis: {
         axisTicks: {
-            show: false,
-            // x軸の区切りいらない
-            axisBorder: {
-                show: false
-            },
-
+            show: false, // x軸の区切りいらない
         },
 
         labels: {
             formatter: function(value) {
-                if (value !== undefined) {
+                if (value != undefined) {
 
                     let day = value.split(" ")
                     return day % 2 == 1 ? "" : value;
@@ -65,8 +62,7 @@ let options = {
     grid: {
         yaxis: {
             lines: {
-                show: false
-                    // 横線いらない
+                show: false // 横線いらない
             },
         },
     },
@@ -80,11 +76,6 @@ let options = {
                 colors: '#B5CDDE',
             }
         },
-        type: 'category',
-        axisTicks: {
-            show: false,
-            width: 1,
-        }
     },
 
     labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
@@ -98,6 +89,7 @@ let options = {
             gradientToColors: ['#74DAFF'],
         }
     },
+    // 色指定
 
     responsive: [{
         breakpoint: 768,

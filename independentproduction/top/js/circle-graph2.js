@@ -7,21 +7,10 @@
             height: 400,
             type: 'donut',
         },
-        stroke: {
-            width: 0,
-        },
         plotOptions: {
             pie: {
                 donut: {
                     size: '55px',
-                    labels: {
-                        show: true,
-                        total: {
-                            showAlways: false,
-                            show: false,
-                            cutoutPercentage: 0,
-                        }
-                    }
                 }
             }
         },
@@ -37,15 +26,16 @@
             horizontalAlign: 'bottom',
             fontSize: '15px',
         },
+        stroke: {
+            width: 0,
+        },
         responsive: [{
             breakpoint: 768,
             options: {
                 chart: {
                     width: 200
                 },
-                legend: {
-                    position: 'bottom'
-                }
+
             }
         }],
         tooltips: { enabled: false },

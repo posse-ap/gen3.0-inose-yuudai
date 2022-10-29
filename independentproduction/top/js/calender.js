@@ -101,7 +101,7 @@ document.getElementById('opened-log-and-submit').onclick = function() {
 }
 
 
-// console.clear();
+console.clear();
 
 
 {
@@ -131,20 +131,13 @@ document.getElementById('opened-log-and-submit').onclick = function() {
     function getCalendarBody() {
         const dates = []; // date: 日付, day: 曜日
         const lastDate = new Date(year, month + 1, 0).getDate();
-        const todayDate = today.getDate();
-        console.log(todayDate)
-        for (let i = 1; i < todayDate; i++) {
-            dates.push({
-                date: i,
-                isToday: false,
-                isDisabled: true,
-            });
-        }
-        for (let i = todayDate; i <= lastDate; i++) {
+
+        for (let i = 1; i <= lastDate; i++) {
             dates.push({
                 date: i,
                 isToday: false,
                 isDisabled: false,
+                isPast: true,
             });
         }
 
@@ -152,6 +145,19 @@ document.getElementById('opened-log-and-submit').onclick = function() {
             dates[today.getDate() - 1].isToday = true;
         }
 
+        for (let i = 0; i < dates.length; i++) {
+            if (year === today.getFullYear() && month === today.getMonth() && dates[i].date > today.getDate() - 1 || month > today.getMonth()) {
+                dates[i].isPast = false;
+            }
+            if (year > today.getFullYear()) {
+                dates[i].isPast = false;
+            }
+            if (year < today.getFullYear()) {
+                dates[i].isPast = true;
+            }
+            // elseにできる？
+
+        }
         return dates;
     }
 
@@ -208,6 +214,9 @@ document.getElementById('opened-log-and-submit').onclick = function() {
                 if (date.isDisabled) {
                     td.classList.add('disabled');
                 }
+                if (date.isPast) {
+                    td.classList.add('past');
+                }
 
                 tr.appendChild(td);
 
@@ -215,7 +224,7 @@ document.getElementById('opened-log-and-submit').onclick = function() {
                 td.addEventListener("click", () => {
                     const gettitle = document.getElementById("title");
                     const getday = gettitle.innerHTML + td.innerHTML + "日";
-                    console.log(getday)
+
                     const day_display = document.getElementById("date")
                     day_display.value = getday
                         // テキストボックスの場合はinnerhtmlじゃなくて.value
@@ -252,12 +261,7 @@ document.getElementById('opened-log-and-submit').onclick = function() {
         createCalendar();
     });
 
-    // document.getElementById('today').addEventListener('click', () => {
-    //     year = today.getFullYear();
-    //     month = today.getMonth();
 
-    //     createCalendar();
-    // });
 
     createCalendar();
 }
