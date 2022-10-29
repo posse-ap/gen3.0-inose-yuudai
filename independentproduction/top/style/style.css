@@ -1,11 +1,10 @@
 /* 共通事項 */
 
 body {
-    height: 100vh;
-    /* overflow-x: hidden; */
-    /* padding-right: 15px; */
-    /* position: fixed; */
-    /* overflow-y: hidden; */
+    height: 100%;
+    width: 100%;
+    background-color: #F5F5F8;
+    user-select: none;
 }
 
 body.overflow-hidden {
@@ -25,32 +24,17 @@ header {
     height: 64px;
     background-color: #FFFFFF;
     z-index: 99;
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* display: flex;
-        justify-content: space-between; */
 }
 
 html {
     box-sizing: border-box;
-    /* overflow-y: hidden; */
-    /* -webkit-overflow-scrolling: touch; */
 }
 
 html.overflow-hidden {
     box-sizing: border-box;
-    /* overflow-y: hidden; */
-    /* -webkit-overflow-scrolling: touch; */
 }
 
-body {
-    height: 100%;
-    width: 100%;
-    background-color: #F5F5F8;
-    /* overflow-y: hidden; */
-}
-
-.main {
+main {
     margin: 0 auto;
 }
 
@@ -74,12 +58,8 @@ p {
     margin-left: 10px;
 }
 
-.header-logo {
-    align-items: center;
-}
-
 #open {
-    /* margin-right: 10px; */
+    display: block;
     padding: 12px;
     background: linear-gradient(to right, #0f71DC, #3ccfff);
     margin: 10px 5%;
@@ -92,7 +72,40 @@ p {
     align-items: center;
     cursor: pointer;
     border: 1px solid #ccc;
-    /* display: flex; */
+}
+
+#decide {
+    display: block;
+    padding: 12px;
+    background: linear-gradient(to right, #0f71DC, #3ccfff);
+    margin: 10px 5%;
+    border-radius: 50px;
+    max-width: 170px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 10px 10px 10px 0 rgba(60, 194, 235, 0.8);
+    color: #FFFFFF;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    max-width: 150px;
+}
+
+#open2 {
+    display: none;
+    box-shadow: 10px 10px 10px 0 rgba(60, 194, 235, 0.8);
+    margin: 0 auto;
+    width: auto;
+    max-width: 570px;
+    padding: 12px;
+    background: linear-gradient(to right, #0f71DC, #3ccfff);
+    border-radius: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
 }
 
 .header-menu {
@@ -116,7 +129,6 @@ p {
 
 .graphs {
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
     gap: 20px;
 }
 
@@ -132,12 +144,13 @@ p {
     max-width: 100%;
 }
 
-.today,
+.todays,
 .month,
 .total {
     padding: 10px 25px 10px 25px;
     background-color: #FFFFFF;
     margin: 10px;
+    box-shadow: 5px 5px 2px 0 #e2dede;
     border-radius: 10px;
 }
 
@@ -165,11 +178,10 @@ p {
 
 .graph {
     padding: 50px;
-    /* padding-bottom: 300px; */
-    /* max-width: 30%; */
     background-color: #FFFFFF;
     margin-top: 15px;
     border-radius: 20px;
+    box-shadow: 5px 5px 2px 0 #e2dede
 }
 
 .circle-graphs {
@@ -181,11 +193,13 @@ p {
 .language {
     background-color: #FFFFFF;
     border-radius: 20px;
+    box-shadow: 5px 5px 2px 0 #e2dede
 }
 
 .content {
     background-color: #FFFFFF;
     border-radius: 20px;
+    box-shadow: 5px 5px 2px 0 #e2dede
 }
 
 .graph-title {
@@ -197,12 +211,9 @@ p {
 .date {
     font-weight: bold;
     font-size: 18px;
-    /* margin: 0 auto;
-            justify-content: center; */
     text-align: center;
-    padding-top: 70px;
+    padding-top: 20px;
     padding-bottom: 30px;
-    /* position: absolute; */
 }
 
 @media screen and (max-width: 768px) {
@@ -223,13 +234,11 @@ p {
 .date:before {
     content: "\03c";
     color: #0f71bc;
-    /* font-size: 2px; */
 }
 
 .date:after {
     content: "\03e";
     color: #97b9d1;
-    /* font-size: 2px; */
 }
 
 
@@ -252,76 +261,32 @@ p {
 
 #modal {
     background: #fff;
-    /* width: 900px; */
     padding: 20px;
     border-radius: 30px;
     position: absolute;
-    /* top: 50%; */
-    /* margin: 0 5%;
-        margin-left: 5%;
-        margin-right: 5%; */
-    /* bottom: 0; */
-    /* left: 50%; */
-    /* right: 50%; */
     left: 4em;
     right: 4em;
-    /* right: 0; */
-    /* margin: 0 5%; */
     margin: 0 auto;
     justify-content: center;
-    /* 左右中央に配置したいのですが、絶対配置の場合は left: 0; 、 right: 0; としたあとに左右の margin を auto にすることで中央揃えにできるので */
-    /* transition: transform 0s; */
-    /* transform: translate(-50%, -50%); */
     z-index: 5;
-    /* margin: 100px; */
     width: auto;
-    /* width: 100%; */
     max-width: 900px;
-    /* min-width: auto; */
-    /* display: inline-block;
-        text-align: center;
-        */
-    /* inset: 0 */
-    /* box-sizing: border-box;
-        white-space: normal */
     height: auto;
-    /* margin-top: 100px; */
     overflow-y: hidden;
-    /* height: 550px; */
-}
-
-@media (min-width: 768px) {
-    #modal {
-        height: 550px;
-    }
 }
 
 #modal-content {
     justify-content: space-between;
     width: auto;
-    /* width: auto; */
-    /* background-color: #0F71BC; */
-    /* height: 100vh; */
-    /* max-height: calc(100vh - 4.0em); */
-    /* overflow-y: scroll; */
     box-sizing: border-box;
-    /* box-sizing: inherit; */
-    /* position: absolute; */
-    /* white-space: normal */
-    /* height: 540px; */
     width: 100%;
     display: block;
-    /* padding-top: 100px; */
 }
 
 @media screen and (max-width: 768px) {
     #modal-content {
-        height: 120vh;
-        /* margin-top: 50vh; */
         width: 100%;
         border-radius: 30px 30px 0 0;
-        /* max-height: calc(100vh - 4em); */
-        /* overflow-x: hidden; */
     }
 }
 
@@ -337,32 +302,20 @@ p {
 #modal-otherthan-close {
     justify-content: space-between;
     width: auto;
-    /* width: 100%; */
-    /* background-color: #0F71BC; */
-    /* height: 100vh; */
-    /* max-height: calc(100vh - 4.0em); */
-    /* overflow-y: scroll; */
     box-sizing: border-box;
-    /* box-sizing: inherit; */
-    /* position: absolute; */
-    /* white-space: normal */
 }
 
 .modal-log-list {
     padding: 0 56px;
     display: grid;
-    gap: 40px;
     width: auto;
     width: 100%;
-    /* overflow-x: hidden; */
     box-sizing: border-box;
     height: 100%;
-    /* height: 150vh */
 }
 
 .modal-log-language>p {
     margin-top: 24px;
-    background-color: #0F71BC;
 }
 
 #mask.hidden {
@@ -377,7 +330,6 @@ p {
 #close {
     font-size: 20px;
     max-width: 40px;
-    /* text-align: right; */
     cursor: pointer;
     border-radius: 50%;
     height: 40px;
@@ -391,28 +343,174 @@ p {
     line-height: 33px;
 }
 
-.log-title-twitter {
-    margin-top: 10px;
-    cursor: pointer;
-}
-
 .share {
     margin-top: 15px;
     cursor: pointer;
     margin-bottom: 20px;
 }
 
-.checkbox .log-title {
+.checkbox.log-title {
     margin-top: 10px;
 }
 
 #posse-assignment {
-    /* margin-top: 100px; */
     display: inline-block;
+}
+
+.checkbox {
+    background-color: #F5F5F8;
+    max-width: 250px;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+    position: relative;
+    gap: 5px;
+    padding: 5px 15px 5px 40px;
+}
+
+.padding-top {
+    margin-top: 10px;
+}
+
+.checkbox.checked {
+    background-color: #0F71BC
 }
 
 input[type=checkbox] {
     display: none;
+}
+
+input[type=checkbox]:checked+label {
+    background: #E7F5FF;
+}
+
+input[type=checkbox]:checked+label::before {
+    background: #0f71bc;
+}
+
+input[name=twitter]:checked+label {
+    background: inherit;
+}
+
+.checkmark-true {
+    content: '';
+    width: 10px;
+    height: 5px;
+    border-left: 3px solid #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
+    transform: rotate(-45deg);
+    display: inline-block;
+    background-size: cover;
+    position: absolute;
+    z-index: 4142121;
+    display: inline-block;
+    left: 9px;
+    top: 13px;
+}
+
+.checkbox::before {
+    content: "";
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+    top: 6px;
+}
+
+
+/* カレンダーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+.arrowmark {
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #f5f5f8;
+    line-height: 33px;
+}
+
+#calendar {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#calendar.display_block {
+    display: table;
+}
+
+table {
+    border-collapse: collapse;
+    /* border: 2px solid #eee; */
+}
+
+
+/* thead,
+        tfoot {
+            background: #eee;
+        } */
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+tr>th {
+    font-size: 8px;
+}
+
+#title {
+    color: black;
+    font-size: 16px;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+td {
+    padding: 12px;
+}
+
+td.disabled {
+    opacity: 0;
+}
+
+td.past {
+    opacity: 0.3;
+}
+
+td.today {
+    font-weight: bold;
+    background-color: #0F71BC;
+    border-radius: 50%;
+    color: #FFFFFF;
+}
+
+#prev,
+#next,
+#today {
+    cursor: pointer;
+    user-select: none;
+}
+
+#prev {
+    color: #316c9f;
+    font-size: 26px;
+}
+
+#next {
+    color: #A7bdce;
+    font-size: 26px;
 }
 
 
@@ -433,9 +531,9 @@ input[type=checkbox] {
     border-radius: 5px;
     font-size: 16px;
     color: black;
-    outline: none;
+    /* outline: none; */
     background-color: #F5F5F8;
-    width: 100%;
+    width: 90%;
     height: 10px
 }
 
@@ -458,16 +556,16 @@ input[type=checkbox] {
 
 .modal-content-list {
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
 }
 
-.checkbox {
-    background-color: #F5F5F8;
-    /* width: 100%; */
-    max-width: 250px;
-    border-radius: 25px;
-    padding: 10px;
-    margin-top: 8px;
-    cursor: pointer;
+.log-title-twitter {
+    background-color: inherit;
+    ;
 }
 
 .content-list-flex {
@@ -479,7 +577,6 @@ input[type=checkbox] {
 /* モーダルの右側------------------------------------- */
 
 .time-twitter {
-    /* box-sizing: border-box; */
     width: auto;
 }
 
@@ -492,10 +589,11 @@ input[type=checkbox] {
     border-radius: 5px;
     font-size: 16px;
     color: black;
-    outline: none;
+    /* outline: none;
+
+            */
     background-color: #F5F5F8;
-    /* max-width: 374px; */
-    width: 100%;
+    width: 90%;
     height: 10px;
 }
 
@@ -508,19 +606,15 @@ input[type=checkbox] {
     border-radius: 5px;
     font-size: 16px;
     color: black;
-    outline: none;
+    /* outline: none; */
     background-color: #F5F5F8;
-    /* width: 374px; */
-    /* max-width: 374px; */
-    width: auto;
-    /* height: 5em; */
+    height: 14em;
 }
 
 textarea {
     resize: none;
     background-color: #F5F5F8;
-    width: 100%;
-    /* border-radius: 10px; */
+    width: 90%;
     padding: 15px;
     margin-bottom: 5px;
     height: 185px;
@@ -548,8 +642,6 @@ textarea {
     cursor: pointer;
     border: 1px solid #ccc;
     margin: 0 auto;
-    /* top: 0; */
-    /* position: absolute; */
 }
 
 
@@ -567,11 +659,16 @@ textarea {
 
 #modal.one-screen {
     margin-top: 0;
-    /* overflow-x: hidden;
-            overflow-y: hidden; */
-    /* overflow: hidden; */
     overflow-y: hidden;
     text-align: center;
+    justify-content: center;
+    height: 550px;
+}
+
+#modal.one-screen2 {
+    margin-top: 0;
+    overflow-y: hidden;
+    /* text-align: center; */
     justify-content: center;
     height: 550px;
 }
@@ -582,12 +679,14 @@ textarea {
     }
 }
 
-#modal::-webkit-scrollbar {
-    display: none;
+@media screen and (max-width: 768px) {
+    #modal.one-screen2 {
+        margin-top: 10em;
+    }
 }
 
-#loading {
-    /* padding-top: 150px; */
+#modal::-webkit-scrollbar {
+    display: none;
 }
 
 .loader {
@@ -609,9 +708,6 @@ textarea {
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
-    /* margin: 150px 0 192px 40em; */
-    /* display: none; */
-    /* height: inherit; */
 }
 
 .loader:before {
@@ -675,6 +771,19 @@ textarea {
     padding-top: 150px;
 }
 
+#finish-finish2 {
+    display: none;
+    left: 0;
+    right: 0;
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+#finish-finish2.open2 {
+    display: block;
+    height: 350px;
+}
+
 @media (max-width: 768px) {
     #finish-finish.open {
         padding-top: 80px;
@@ -684,20 +793,11 @@ textarea {
 
 /* ローディングを三秒流した後の完了画面 */
 
-.check-mark-containor {
-    /* width: 100px; */
-    /* height: 100px; */
-}
-
 .check-mark {
     color: white;
     background-color: #BDE360;
     transform: rotate(139deg) translateX(5px);
-    /* transform: rotate(139deg) translateX(-75px); */
-    /* padding-left: 100px; */
-    /* transrateX {} */
     font-size: 34px;
-    /* width: auto; */
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -707,7 +807,6 @@ textarea {
 
 .record-title {
     color: #BDE360;
-    /* font-size: 2ch; */
 }
 
 .record-text {
@@ -715,29 +814,20 @@ textarea {
     left: 0;
     right: 0;
     text-align: center;
-    /* margin: 0 auto; */
     display: block;
     font-size: 18px;
     line-height: 1.8
 }
 
 
-/* カレンダー */
-
-
 /* レスポンシブ */
 
 @media (max-width:768px) {
     #open {
-        box-shadow: 10px 10px 10px 0 rgba(60, 194, 235, 0.8);
-        position: absolute;
-        bottom: 0;
-        max-width: 570px;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        width: auto;
-        /* ↑これだーーーーーーーーーーー */
+        display: none;
+    }
+    #open2 {
+        display: block;
     }
     .menu {
         padding-top: 18px;

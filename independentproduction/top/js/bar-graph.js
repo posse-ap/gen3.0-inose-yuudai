@@ -1,54 +1,109 @@
 'use strict';
 
-{
-    let options = {
-        series: [30, 20, 10, 5, 5, 20, 20, 10],
-        chart: {
-            height: 400,
-            type: 'donut',
+
+let options = {
+    series: [{
+        name: '時間', // グラフにホバーした時に出る名前
+        data: [3, 4, 5, 3, 0, 0, 4, 2, 2, 8, 8, 2, 2, 1, 7, 4, 4, 3, 3, 3, 2, 2, 6, 2, 2, 1, 1, 1, 7, 8]
+            // 各グラフのデータ
+    }],
+    legend: // legend:出てくる文字のやつ
+    {
+
+        display: false
+    },
+    chart: {
+        height: 350,
+        type: 'bar',
+        toolbar: {
+            show: false // 自動で作られるハンバーガーメニューの生成を防ぐ
+
+        }
+    },
+
+
+
+
+    plotOptions: {
+        bar: {
+            columnWidth: '50%', // グラフの太さ
+
+            borderRadius: 5, // グラフの先っちょ丸くする
+        }
+    },
+
+    dataLabels: {
+        enabled: false // グラフ一本一本には数値書き込まなくていいよ
+    },
+
+
+
+
+    xaxis: {
+        axisTicks: {
+            show: false, // x軸の区切りいらない
         },
-        stroke: {
-            width: 0,
+
+        labels: {
+            formatter: function(value) {
+                if (value != undefined) {
+
+                    let day = value.split(" ")
+                    return day % 2 == 1 ? "" : value;
+                }
+            },
+            style: {
+                colors: '#B5CDDE',
+            }
         },
-        plotOptions: {
-            doughnut: {
-                labels: {}
+    },
+
+
+    grid: {
+        yaxis: {
+            lines: {
+                show: false // 横線いらない
             },
         },
+    },
 
-
-        labels: ["HTML", "CSS", "JavaScript", "PHP", "Laravel", "SQL", "SHELL", "情報システム基礎知識(その他)"],
-        colors: ['#0445EC', '#0F70BC', '#20BDDE', '#3CCEFE', '#B29EF3', '#6C46EB', '#4A17EF', '#3005C0'],
-
-        dataLabels: {
+    yaxis: {
+        labels: {
+            formatter: function(value) {
+                return value + "h";
+            },
             style: {
-                fontSize: '0.75rem',
+                colors: '#B5CDDE',
             }
         },
+    },
 
-        legend: {
-            position: 'bottom',
-            horizontalAlign: 'bottom',
-            fontSize: '15px',
-        },
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
 
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                    position: 'bottom'
-                }
+
+    fill: {
+        colors: ["#0F71BB"],
+        type: 'gradient',
+        gradient: {
+            type: 'vertical',
+            gradientToColors: ['#74DAFF'],
+        }
+    },
+    // 色指定
+
+    responsive: [{
+        breakpoint: 768,
+        options: {
+
+            chart: {
+                height: 200,
             }
-        }],
-        tooltips: { enabled: false },
-    };
+        },
+    }]
 
-    let ctx = document.getElementById('bar-graph')
-    let chart = new ApexCharts(ctx, options);
+};
 
-    chart.render();
 
-}
+
+let chart = new ApexCharts(document.querySelector("#bar-graph"), options);
+chart.render();
