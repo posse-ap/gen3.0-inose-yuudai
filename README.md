@@ -1,4 +1,5 @@
 # inose-yuudai
 
-test. 
+ test
+ 
 

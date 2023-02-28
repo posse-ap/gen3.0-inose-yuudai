@@ -81,6 +81,7 @@
     <span class="js-answerText"></span>
     </p>
     </div>
+
 </div>
 ${hrefHtml}
 </section>`;
@@ -134,11 +135,14 @@ ${hrefHtml}
                 // 正解ならtrue, 不正解ならfalseをcheckCorrectに格納
                 const correctNumber = quizArray[selectedQuiz].correctNumber;
                 const isCorrect = correctNumber === selectedAnswerNumber;
+
                 // 回答欄にテキストやclass名を付与
                 answerText.innerText = quizArray[selectedQuiz].answers[correctNumber];
                 setTitle(answerTitle, isCorrect);
                 setClassName(answerBox, isCorrect);
             });
+
         });
+
     });
 }
